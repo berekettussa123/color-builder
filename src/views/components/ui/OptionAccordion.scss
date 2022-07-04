@@ -1,0 +1,105 @@
+@media (min-width: 920px) {
+  .option-accordion {
+    &.open {
+      margin: 0.8rem 0;
+      box-shadow: 0px 8px 26px 0px #000000cc;
+    }
+  }
+}
+
+.option-accordion {
+  color: #999999;
+  // width: 900px;
+  // background-color: aqua !important;
+  font-weight: 900;
+  font-size: 1.3rem;
+
+  background-color: #222222;
+  margin: 0 0 0.625rem;
+  margin-right: 0.8rem;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  transition: margin 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+
+  .accordion-header {
+    .arrow {
+      transform: rotate(0deg);
+      transition: transform 0.2s ease-in;
+      &.active {
+        transform: rotate(-90deg);
+      }
+      // &.Noac{
+      //   background-color: aqua;
+      // }
+    }
+  }
+  .accordion-body {
+    overflow: hidden;
+    max-height: 0vh;
+    transition: max-height 0.3s ease-in;
+    &.active {
+      max-height: 100vh;
+    }
+    &.colorno {
+      background-color: yellow;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .option-accordion-small {
+  }
+  .openMixed {
+    max-height: 40vh;
+    width: 100%;
+    margin-right: 30px;
+    overflow-y: auto;
+    z-index: -999999999999999 !important;
+    // background-color: aqua !important;
+  }
+  .option-accordion {
+    transform: scale(1);
+    transition: all 0.1s ease;
+    &.open {
+      // background-color: aqua;
+      // max-height: 40vh;
+      // width: 100%;
+      // margin-right: 30px;
+      // overflow-y: auto;
+      // position: fixed;
+      // z-index: 9000000000000770 !important;
+      // bottom: 0px;
+      // background-color: #161616;
+      // // padding-top: 200px;
+      // ----------------------------
+      min-height: auto;
+      position: fixed !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      width: 94% !important;
+      align-self: center;
+      margin-left: 12px;
+      // min-height: 50% !important;
+      // background: rgba(0, 0, 0, 0.5) !important;
+      z-index: 9999 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      backdrop-filter: blur(50px) !important;
+    }
+    &.FirstClosed{
+      display: none;
+    }
+    .option-accordion {
+      &.openMixed {
+        // background-color: aqua !important;
+      }
+    }
+  }
+  .primaryAndSecondary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

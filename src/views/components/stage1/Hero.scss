@@ -1,0 +1,133 @@
+
+@media (min-width: 920px) {
+.page-header{
+  display: flex;
+  
+  
+  
+}
+.cta-hero{
+  margin-right: 20px !important;
+}
+.half{
+  margin-top: 4rem;
+}
+.half{
+  p{
+    width: 70%;
+  }
+  h2{
+    font-size: 34px !important;
+  }
+}
+.button-container{
+  display: flex;
+  align-items: flex-end;
+  background-color: #D9D9D9;
+  justify-content: flex-end;
+}
+.button-container{
+  .cta{
+    margin-bottom: 1rem;
+  }
+}
+.cta-container{
+  // margin: 0;
+  width: 50%;
+  background-color: #D9D9D9;
+  
+}
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  // position: sticky;
+  top: 61px;
+  z-index: 5;
+  .hero-container-inner {
+    background-color: var(--bg);
+    min-height: 21.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    &.scrolled {
+      min-height: 10rem;
+      
+    }
+  }
+ 
+}
+}
+
+
+@media (max-width: 920px) {
+  .hero-container{
+    z-index: 900 !important;
+
+    .gradient {
+      z-index: 599999!important;
+      height: 9rem;
+      background: linear-gradient(180deg, #161616 0%, rgba(22, 22, 22, 0) 100%);
+    }
+  }
+    .page-header{
+      margin-top: 90px !important;
+      background-color: #D9D9D9 !important;
+    }
+    .button-container{
+
+
+      padding-right: 22px;
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+      .fixed_navbar {
+        background-color: #D9D9D9;
+        width: 100%!important;
+        position: fixed !important;
+        top: 60px !important;
+        left: 100 !important;
+        right: 100 !important;
+      }
+      .fixed_navbar{
+        .cta{
+          width: 95%;
+          z-index: 89999999999999999 !important;
+        }
+      }
+ 
+  .stickyMenu {
+    // top: 200px;
+    // position: sticky !important;
+    // z-index: 677888888;
+    // background-color: #161616;
+  }
+  // .imgcc{
+  //   position: fixed;
+  // }
+
+  .hero-container {
+    height: 100px !important ;
+    margin-top: -145px;
+    // position: relative !important;
+    margin-bottom: 320px;
+    
+  }
+  .hero-container {
+    p {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 35px;
+    }
+    .page-header {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+    }
+
+  
+  }
+}
+
