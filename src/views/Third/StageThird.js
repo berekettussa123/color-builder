@@ -9,7 +9,9 @@ import { useContext, useState } from "react";
 import { IsopenContext } from "../../context/isopenContext";
 
 function StageSecond(){
+  const {accordionOpen } = useContext(IsopenContext);
   const stage = 3;
+  console.log("++++++++++++" + accordionOpen);
   
   return (
     <>
@@ -31,8 +33,8 @@ function StageSecond(){
 
             
         </nav> */}
-      <MainContainer leftPanel={ <LeftPanel stage={3} />} rightPanel={ <RightPanel stage={3} />}>
-        <MiddleContainer  />
+      <MainContainer leftPanel={ <LeftPanel stage={"three"} />} rightPanel={ <RightPanel stage={3} />}>
+        <MiddleContainer stage={"three"}  />
       </MainContainer>
       
     </>

@@ -279,7 +279,19 @@ header .color {
     display: initial;
   }
 }
+
 @media (max-width: 920px) {
+
+  .mobilesecon{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+    .allContainer{
+  display: flex;
+  flex-direction: column;
+    }
   .ctaContainer {
 
     position: fixed;

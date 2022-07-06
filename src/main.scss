@@ -169,13 +169,19 @@ h4,
 p {
   margin: 0;
 }
-
 @media (min-width: 920px) {
+ 
   .leftContainers{
     margin-top: 5rem;
   }
   .stagethreeacc{
     margin-top: 4rem;
+    
+    display: flex;
+    flex-direction: column;
+  }
+  .accordionCTA{
+    display: flex;
   }
   .accordionAndCTA{
     margin-top: 4rem;
@@ -183,8 +189,15 @@ p {
 }
 
 @media (max-width: 920px) {
+ 
+  .hideLeftPanel{
+    display: none;
+  }
   .CenterClosedContext{
     display: none;
+  }
+  .navigation-instructions{
+    font-size: 14px !important;
   }
   .buttonLine{
     display: none !important;
@@ -212,9 +225,10 @@ p {
   .minimizeMenu{
     transform: translateY(100px);
     transition: all 0.4s ease-out;
+    display: none;
   }
   .leftContainers {
-    max-height: 45vh;
+    max-height: 40vh;
    width: 95%;
     
     // z-index: -2;
@@ -257,4 +271,5 @@ p {
   .cta-container{
     margin: 0rem 0.0rem 0rem 0.3rem;
   }
+  
 }

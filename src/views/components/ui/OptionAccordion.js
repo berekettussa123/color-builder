@@ -56,7 +56,7 @@ function OptionAccordion(props) {
       <button className="w-full" onClick={openButton}>
         <div
           onClick={handleClick}
-          className="accordion-header h-14 py-3.5 px-6 flex items-center"
+          className={` ${accordionOpen && 'hideMixedAcc'} accordion-header  h-14 py-3.5 px-6 flex items-center`}
         >
           <div
              className={`arrow${
@@ -83,6 +83,7 @@ function OptionAccordion(props) {
           <p className="font-normal grow-0 max-w-[10rem] text-ellipsis overflow-hidden whitespace-nowrap">
             {props.selectedOption}
           </p>
+          
         </div>
       </button>
       {(props.title === 'Mixed Options' && !windowWidth) && (

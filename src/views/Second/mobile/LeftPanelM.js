@@ -1,20 +1,16 @@
-import { useLayoutEffect, useState } from 'react';
+import { useContext, useEffect, useState } from "react";
+import { IsopenContext } from "../../../context/isopenContext";
+import BuildModal from "../../components/modal/BuildModal";
+import ColorCircle from "../../components/ui/ColorCircle";
+import ColorCircle2 from "../../components/ui/ColorCircle2";
+import OptionAccordion from "../../components/ui/OptionAccordion";
+import Select from "../../components/ui/Select";
+import SelectColor from "../../components/ui/SelectColor";
+import SelectColor2 from "../../components/ui/SelectColor2";
+import SelectInput from "../../components/ui/SelectInput";
 
-import OptionAccordion from '../../components/ui/OptionAccordion';
-import Select from '../../components/ui/Select';
-import SelectInput from '../../components/ui/SelectInput';
-import SelectColor from '../../components/ui/SelectColor';
-import SelectColor2 from '../../components/ui/SelectColor2';
-import SelectImage from '../../components/ui/SelectImage';
-import ColorCircle from '../../components/ui/ColorCircle';
-import Modal from '../modal/Modal';
-import BuildModal from '../modal/BuildModal';
-import { useContext } from 'react';
-import { IsopenContext } from '../../../context/isopenContext';
-import ColorCircle2 from '../ui/ColorCircle2';
-import { useEffect } from 'react';
 
-function LeftPanel(props) {
+function LeftPanelM(props) {
   const { singleOpened ,dispatch} = useContext(IsopenContext);
   const [state, setState] = useState({});
   const [show, setShow] = useState(false);
@@ -97,7 +93,7 @@ function LeftPanel(props) {
   };
   
   return (
-    <div className={`${accordionOpen ? "hideLeftMenu " : ""} leftContainers ${allMaximize && 'minimizeAll'}`}>
+    <div >
       <div className="gradients"></div>
       <OptionAccordion
         stage="two"
@@ -682,4 +678,4 @@ function LeftPanel(props) {
   );
 }
 
-export default LeftPanel;
+export default LeftPanelM;

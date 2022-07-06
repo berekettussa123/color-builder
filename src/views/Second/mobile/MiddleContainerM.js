@@ -1,19 +1,19 @@
 import { useContext } from "react";
 import { IsopenContext } from "../../../context/isopenContext";
-import "./MiddleContainer.scss";
+import "../../components/ui/MiddleContainer.scss";
 
-function MiddleContainer(props) {
+function MiddleContainerM(props) {
   const {accordionOpen } = useContext(IsopenContext);
   const {allMaximize,dispatch} = useContext(IsopenContext)
   console.log("i am middle -------- "+props.stage);
 
 // console.log("this is   "+allMaximize);
   return (
-    <div className= {`${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 ${allMaximize && "iconsMinimize"}`}>
-      <div className="middle-container-content flex-1 w-full">
+    <div >
+      <div >
       </div>
-      <div className={` ${props.stage==="two" && "stageTwoCenter"}  ${props.stage==="three" && " stageThreeCenter "} middle-container-menu flex flex-col justify-center items-center`}>
-        <div className="navigation-dots flex my-2">
+      <div >
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -94,4 +94,4 @@ function MiddleContainer(props) {
   );
 }
 
-export default MiddleContainer;
+export default MiddleContainerM;
