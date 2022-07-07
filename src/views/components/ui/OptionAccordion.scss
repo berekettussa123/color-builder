@@ -23,7 +23,7 @@
   transition: box-shadow 0.2s ease-in;
 
   .accordion-header {
-    z-index: 10000 !important;
+    z-index: 1000000000 !important;
     .arrow {
       transform: rotate(0deg);
       transition: transform 0.2s ease-in;
@@ -59,7 +59,7 @@
     width: 100%;
     margin-right: 30px;
     overflow-y: auto;
-    z-index: -999 !important;
+    z-index: -999999999999999 !important;
     // background-color: aqua !important;
   }
   .option-accordion {

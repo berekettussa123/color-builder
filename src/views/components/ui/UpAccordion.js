@@ -17,7 +17,7 @@ function UpAccordion (props) {
     setStage(props.stage&&props.stage)
   }, [props.stage])
 
-  console.log(accordionOpen);
+  console.log("000000000000" +accordionOpen);
 
 
   return (

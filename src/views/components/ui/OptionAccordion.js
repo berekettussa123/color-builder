@@ -14,10 +14,11 @@ function OptionAccordion(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
 
-  console.log("----------------"+accordionOpen)
+  // console.log("----------------"+accordionOpen)
   const handleClick = () => {
     dispatch({ type: 'MIXEDOPENSHOW' });
   };
+  console.log(">>>>>>>>>"+isMizedOpen)
   // const isOpenedClicked = () => {
   //   // setIsOpened(!isOpened);
   //   // console.log('7777777777777  ' + isOpened);
