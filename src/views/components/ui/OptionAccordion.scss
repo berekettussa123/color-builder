@@ -36,7 +36,7 @@
     }
   }
   .accordion-body {
-    overflow: hidden;
+    overflow: scroll;
     max-height: 0vh;
     transition: max-height 0.3s ease-in;
     &.active {
@@ -51,10 +51,11 @@
 
 @media (max-width: 920px) {
   .accordion-body {
+    overflow: hidden;
+    max-height: 0vh;
     transition: max-height 0.3s ease-in;
     &.active {
       max-height: 100vh;
-      overflow-y: scroll;
       
     }}
   .hideMixedAcc{
@@ -77,7 +78,7 @@
     transform: scale(1);
     transition: all 0.1s ease;
     max-height: 40vh !important;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     &.open {
       // background-color: aqua;
       // max-height: 40vh;
@@ -91,7 +92,7 @@
       // // padding-top: 200px;
       // ----------------------------
       min-height: auto;
-      position: fixed !important;
+      position: absolute !important;
       bottom: 5px !important;
       left: 1rem;
       // left: 0 !important;
@@ -100,7 +101,7 @@
       margin-left: 1px;
       // min-height: 50% !important;
       // background: rgba(0, 0, 0, 0.5) !important;
-      z-index: 9999 !important;
+      z-index: 999900000 !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: center !important;

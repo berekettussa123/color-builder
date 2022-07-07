@@ -97,7 +97,7 @@ function LeftPanel(props) {
   };
   
   return (
-    <div className={` leftContainers ${ isMizedOpen? " LeftContainerOpen " : ""} ${allMaximize && 'minimizeAll'}`}>
+    <div className={` leftContainers ${ isMizedOpen? " LeftContainerOpen " : ""} ${allMaximize ? ' minimizeAll' : ''}`}>
       {/* <div className="gradients"></div> */}
       <OptionAccordion
         stage="two"
