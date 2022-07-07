@@ -51,7 +51,11 @@ function UpAccordion (props) {
         </div>
       </button>
       <div className={`accordion-body${open ? " active" : ""}`}>
-        <div  className="accordion-body-content py-3.5 px-6 overflow-y-auto">
+        <div  
+        
+      
+        
+        className="accordion-body-content py-3.5 px-6 overflow-y-auto">
           {props.children}
         </div>
       </div>
@@ -81,8 +85,9 @@ function UpAccordion (props) {
           {/* <p className="grow-0">{props.selectedOption || "Option"}</p> */}
         </div>
       </button>
-      <div className={`accordion-body${open ? " active" : ""} ${accordionOpen?" openAccordionContext":""}`}>
-        <div className="accordion-body-content py-3.5 px-6 overflow-y-auto">
+      <div className={`accordion-body${open ? " active" : ""} `}>
+        <div   style={{ backgroundColor: 'yellow' ,position: 'fixed',bottom: '0,',left:'0' 
+        }} className="accordion-body-content py-3.5 px-6 overflow-y-auto">
           {props.children}
         </div>
       </div>
