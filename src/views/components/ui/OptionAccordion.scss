@@ -11,7 +11,6 @@
   color: #999999;
   // width: 900px;
   // background-color: aqua !important;
-  height: auto;
   font-weight: 900;
   font-size: 1.3rem;
 
@@ -36,12 +35,11 @@
     }
   }
   .accordion-body {
-    overflow: scroll;
+    overflow: hidden;
     max-height: 0vh;
     transition: max-height 0.3s ease-in;
     &.active {
       max-height: 100vh;
-
     }
     &.colorno {
       background-color: yellow;
@@ -50,18 +48,7 @@
 }
 
 @media (max-width: 920px) {
-  .accordion-body {
-    overflow: hidden;
-    max-height: 100vh;
-    transition: max-height 0.3s ease-in;
-    &.active {
-      max-height: 100vh;
-      
-    }}
   .hideMixedAcc{
-    display: none;
-  }
-  .hideMixed{
     display: none;
   }
   .option-accordion-small {
@@ -77,8 +64,6 @@
   .option-accordion {
     transform: scale(1);
     transition: all 0.1s ease;
-    // max-height: 40vh !important;
-    // overflow-y: scroll;
     &.open {
       // background-color: aqua;
       // max-height: 40vh;
@@ -91,17 +76,17 @@
       // background-color: #161616;
       // // padding-top: 200px;
       // ----------------------------
-      height: auto;
+      min-height: auto;
       position: fixed !important;
       bottom: 5px !important;
       left: 1rem;
       // left: 0 !important;
-      width: 100% !important;
+      width: 92% !important;
       align-self: center;
       margin-left: 1px;
       // min-height: 50% !important;
       // background: rgba(0, 0, 0, 0.5) !important;
-      z-index: 999900000 !important;
+      z-index: 9999 !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: center !important;
@@ -121,8 +106,5 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-  }
-  .NotOpened{
-    display: none;
   }
 }
