@@ -22,7 +22,6 @@ function LeftPanel(props) {
     };
     setState(newState);
   };
-  console.log("**********" + props.stage)
   return (
     <div style={{ marginTop: '5rem' }}>
       {

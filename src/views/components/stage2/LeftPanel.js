@@ -32,7 +32,6 @@ function LeftPanel(props) {
   const { allMaximize, arrowUp,isMizedOpen } =  useContext(IsopenContext);
   const {accordionOpen } = useContext(IsopenContext);
 
-  console.log(singleOpened);
   const showModal = () => {
     setShow(true);
   };
