@@ -18,7 +18,7 @@
   }
   .left-panel,
   .right-panel {
-    // height: calc(100vh - 4rem);
+    height: calc(100vh - 4rem);
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     &::-webkit-scrollbar {
@@ -34,10 +34,10 @@
     overflow: hidden;
   }
   .left-panel{
-    flex: 7 !important;
+    flex: 5 !important;
   }
   .right-panel {
-    flex: 1;
+    flex: 1 !important;
     // margin-top: 5rem !important;
 
   }
@@ -66,8 +66,7 @@
     }
   }
   .main-container {
-    // height: 100vh;
-    // margin-top: 5rem;
+    height: 100vh;
     background-color: aqua !important;
     .center-panel {
       flex: 1;
@@ -111,7 +110,7 @@
     z-index: -8888888888888888;
   }
   .left-panel {
-    z-index: 332222222;
+    z-index: 33;
     // height: 40vh !important;
     // background-color: aqua;
     
