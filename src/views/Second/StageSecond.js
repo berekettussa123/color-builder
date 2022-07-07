@@ -23,7 +23,7 @@ function StageSecond() {
       <MainContainer leftPanel={<LeftPanel stage={"two"}/>} rightPanel={<RightPanel stage={2} />}>
         {((!isMizedOpen&& !windowWidth)||(isMizedOpen&&!windowWidth )||(windowWidth&&!isMizedOpen))&&<MiddleContainer stage={"two"}/>}
       </MainContainer>
-      {isMizedOpen && (
+      {/* {isMizedOpen && (
         <div className= {`ctaContainer ${allMaximize && "minimizeMenu"}`}>
           <div onClick={handleClick} className="secondaryCta">
             <span  className="vectorArrowLeft">&larr;</span>Secondary
@@ -32,7 +32,7 @@ function StageSecond() {
             Primary <span className="vectorArrowRight">&rarr;</span>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }
