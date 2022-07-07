@@ -241,8 +241,8 @@ p {
     // z-index: -2;
     // background-color: aqua;
     overflow-y: scroll !important;
-    position: fixed;
-    bottom: 105px;
+    position: absolute;
+    bottom: 20vh;
     z-index: 111111111111111111111 !important;
   }
   .minimizeAll{
