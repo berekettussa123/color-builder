@@ -97,9 +97,7 @@ function LeftPanel(props) {
   };
   
   return (
-    <div className={` leftContainers ${ isMizedOpen? " LeftContainerOpen " : ""} 
-   
-    }`}>
+    <div className={` leftContainers ${ isMizedOpen? " LeftContainerOpen " : "" }`}>
       {/* <div className="gradients"></div> */}
       <OptionAccordion
         stage="two"
