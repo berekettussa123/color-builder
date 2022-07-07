@@ -4,11 +4,16 @@
 .main-container {
   width: auto;
 }
+@media (max-width: 920px){
+  .main-container {
+    .center-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 680px;
+    }}
+}
 .main-container {
   .center-panel {
-    display: flex;
-    flex-direction: column;
-    min-width: 680px;
 
   }
   .left-panel,
@@ -58,13 +63,13 @@
   }
   .main-container {
     .center-panel {
-      // background-color: aliceblue;
-      // min-width: 100px !important;
-      // height: 10vh !important;
-      // margin-top: 12rem !important;
-      // order: 1;
-      // // z-index: 9000;
-      // margin-bottom: 3rem;
+      background-color: aliceblue;
+      min-width: 100px !important;
+      height: 10vh !important;
+      margin-top: 5rem !important;
+      order: 1;
+      // z-index: 9000;
+      margin-bottom: 3rem;
       // z-index: 999999999999999999999;
     }
   }

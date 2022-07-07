@@ -235,7 +235,7 @@ p {
     display: none;
   }
   .leftContainers {
-    height: 70vh;
+    height: 30vh;
    width: 95%;
     
     // z-index: -2;
@@ -243,7 +243,7 @@ p {
     overflow-y: scroll !important;
     position: fixed;
     bottom: 105px;
-    z-index: 111111111111111111111 !important;
+    z-index: 1111111111111 !important;
   }
   .minimizeAll{
     transform: translateY(600px);
