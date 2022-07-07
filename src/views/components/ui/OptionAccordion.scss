@@ -77,7 +77,7 @@
   .option-accordion {
     transform: scale(1);
     transition: all 0.1s ease;
-    max-height: 40vh !important;
+    // max-height: 40vh !important;
     // overflow-y: scroll;
     &.open {
       // background-color: aqua;
