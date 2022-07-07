@@ -103,7 +103,7 @@ function OptionAccordion(props) {
     </div>) :(<div
       // onClick={isOpenedClicked}
       
-      className={`option-accordion${open ? ' open' : ''} ${isMizedOpen && "FirstClosed"}`}
+      className={`option-accordion${open ? ' open' : ''} ${isMizedOpen && " FirstClosed"}`}
     >
       <button className="w-full" onClick={openButton}>
         {(isMizedOpen && windowWidth) &&<MiddleContainer/>}

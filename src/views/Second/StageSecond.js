@@ -21,7 +21,7 @@ function StageSecond() {
     <>
       <Nav />
       <MainContainer  leftPanel={<LeftPanel stage={"two"}/>} rightPanel={<RightPanel stage={2} />}>
-        {((!isMizedOpen&& !windowWidth)||(isMizedOpen&&!windowWidth )||(windowWidth&&!isMizedOpen))&&<MiddleContainer stage={"two"}/>}
+        {/* {((!isMizedOpen&& !windowWidth)||(isMizedOpen&&!windowWidth )||(windowWidth&&!isMizedOpen))&&<MiddleContainer stage={"two"}/>} */}
       </MainContainer>
       {/* {isMizedOpen && (
         <div className= {`ctaContainer ${allMaximize && "minimizeMenu"}`}>

@@ -18,7 +18,7 @@ function RightPanel(props) {
   console.log('---------------' + isMizedOpen);
   return (
     <>
-      { 
+      {
         <div>
           
           { (windowWidth && props.stage==="three") && <LeftPanel/>}
