@@ -6,6 +6,7 @@ import SelectInput from '../../components/ui/SelectInput';
 import SelectColor from '../../components/ui/SelectColor';
 import ColorCircle from '../../components/ui/ColorCircle';
 import { IsopenContext } from '../../../context/isopenContext';
+import MiddleContainer from '../ui/MiddleContainer';
 
 function LeftPanel(props) {
   const [windowWidth, setWindowWidth] = useState();
@@ -23,7 +24,11 @@ function LeftPanel(props) {
   };
   return (
     <div style={{ marginTop: '5rem' }}>
-      {((!allMaximize && !windowWidth)||(allMaximize && !windowWidth)||(!allMaximize && windowWidth))&&
+      {
+      ((!allMaximize && !windowWidth)||(allMaximize && !windowWidth)||(!allMaximize && windowWidth))&&
+        
+      <>
+      {windowWidth && <MiddleContainer/>}
         <OptionAccordion
         title="Mixed Options"
         stage={props.stage}
@@ -107,7 +112,9 @@ function LeftPanel(props) {
             </div>
           </button>
 
-      </OptionAccordion>}
+      </OptionAccordion>
+      </>
+      }
     </div>
   );
 }

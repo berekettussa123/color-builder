@@ -5,11 +5,15 @@ import LeftPanel from "../components/stage3/LeftPanel";
 import MiddleContainer from "../components/ui/MiddleContainer";
 import RightPanel from "../components/stage2/RightPanel";
 import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { IsopenContext } from "../../context/isopenContext";
 
 function StageSecond(){
   const {accordionOpen } = useContext(IsopenContext);
+  const [windowWidth, setWindowWidth] = useState();
+  useEffect(() => {
+    setWindowWidth(window.innerWidth && window.innerWidth <= 600);
+  }, []);
   const stage = 3;
   console.log("++++++++++++" + accordionOpen);
   
@@ -34,7 +38,7 @@ function StageSecond(){
             
         </nav> */}
       <MainContainer leftPanel={ <LeftPanel stage={"three"} />} rightPanel={ <RightPanel stage={3} />}>
-        <MiddleContainer stage={"three"}  />
+       {!windowWidth && <MiddleContainer stage={"three"}  />}
       </MainContainer>
       
     </>
