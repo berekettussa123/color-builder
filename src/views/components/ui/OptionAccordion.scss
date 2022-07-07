@@ -41,6 +41,7 @@
     transition: max-height 0.3s ease-in;
     &.active {
       max-height: 100vh;
+
     }
     &.colorno {
       background-color: yellow;
@@ -49,6 +50,13 @@
 }
 
 @media (max-width: 920px) {
+  .accordion-body {
+    transition: max-height 0.3s ease-in;
+    &.active {
+      max-height: 100vh;
+      overflow-y: scroll;
+      
+    }}
   .hideMixedAcc{
     display: none;
   }
