@@ -52,7 +52,7 @@
 @media (max-width: 920px) {
   .accordion-body {
     overflow: hidden;
-    max-height: 0vh;
+    max-height: 100vh;
     transition: max-height 0.3s ease-in;
     &.active {
       max-height: 100vh;
