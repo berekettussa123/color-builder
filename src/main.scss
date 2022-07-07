@@ -235,14 +235,14 @@ p {
     display: none;
   }
   .leftContainers {
-    height: 100vh;
+    height: 50vh;
    width: 95%;
     
     // z-index: -2;
     // background-color: aqua;
     overflow-y: scroll !important;
     position: fixed;
-    bottom: 105px;
+    bottom: 0;
     z-index: 1111111111111 !important;
   }
   .minimizeAll{
