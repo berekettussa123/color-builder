@@ -97,8 +97,8 @@ function LeftPanel(props) {
   };
   
   return (
-    <div className={`${ isMizedOpen? " LeftContainerOpen " : ""} leftContainers ${allMaximize && 'minimizeAll'}`}>
-      <div className="gradients"></div>
+    <div className={` leftContainers ${ isMizedOpen? " LeftContainerOpen " : ""} ${allMaximize && 'minimizeAll'}`}>
+      {/* <div className="gradients"></div> */}
       <OptionAccordion
         stage="two"
         showBuildModal={showBuildModal}
