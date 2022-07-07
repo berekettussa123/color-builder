@@ -3,6 +3,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { IsopenContext } from '../../../context/isopenContext';
 import UpAccordion from '../../components/ui/UpAccordion';
+import MiddleContainer from '../ui/MiddleContainer';
 import LeftPanel from './LeftPanel';
 
 function RightPanel(props) {
@@ -19,6 +20,7 @@ function RightPanel(props) {
     <>
       {
         <div>
+          
           {windowWidth && <LeftPanel/>}
           <div
             className={`${

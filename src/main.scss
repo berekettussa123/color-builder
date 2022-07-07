@@ -244,6 +244,7 @@ p {
     position: absolute;
     bottom: 20vh;
     z-index: 111111111111111111111 !important;
+    
   }
   .minimizeAll{
     transform: translateY(600px);
@@ -251,13 +252,14 @@ p {
     opacity: 0;
   }
   .accordionAndCTA {
-    position: fixed;
-    width: 100%;
-    bottom: -1rem;
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    gap: 1.3rem !important;
+    // position: fixed;
+    // width: 100%;
+    // bottom: -1rem;
+    // display: flex;
+    // flex-direction: row;
+    // align-self: flex-end;
+    // gap: 1.3rem !important;
+    display: none;
     // height: 30px;
   }
   .accordionAndCTA {
