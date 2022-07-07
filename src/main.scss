@@ -234,6 +234,12 @@ p {
     transition: all 0.4s ease-out;
     display: none;
   }
+  .LeftContainerOpen{
+    height: 50vh;
+    overflow-y: scroll;
+    position: fixed;
+    bottom: 0 !important;
+  }
   .leftContainers {
     max-height: 40vh;
    width: 95%;

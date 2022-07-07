@@ -86,8 +86,10 @@ function UpAccordion (props) {
         </div>
       </button>
       <div className={`accordion-body${open ? " active" : ""} `}>
-        <div   style={{ backgroundColor: 'yellow' ,position: 'fixed',bottom: '0,',left:'0' 
-        }} className="accordion-body-content py-3.5 px-6 overflow-y-auto">
+        <div   
+//         style={{ backgroundColor: 'yellow' ,position: 'fixed',bottom: '0,',left:'0' 
+// }} 
+        className="accordion-body-content py-3.5 px-6 overflow-y-auto">
           {props.children}
         </div>
       </div>

@@ -29,7 +29,7 @@ function LeftPanel(props) {
   const [both2, setBoth2] = useState(
     state.colorOption2 && state.colorOption2.value
   );
-  const { allMaximize, arrowUp } =  useContext(IsopenContext);
+  const { allMaximize, arrowUp,isMizedOpen } =  useContext(IsopenContext);
   const {accordionOpen } = useContext(IsopenContext);
 
   console.log(singleOpened);
@@ -97,7 +97,7 @@ function LeftPanel(props) {
   };
   
   return (
-    <div className={`${accordionOpen ? "hideLeftMenu " : ""} leftContainers ${allMaximize && 'minimizeAll'}`}>
+    <div className={`${ isMizedOpen? " LeftContainerOpen " : ""} leftContainers ${allMaximize && 'minimizeAll'}`}>
       <div className="gradients"></div>
       <OptionAccordion
         stage="two"

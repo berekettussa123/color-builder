@@ -18,169 +18,161 @@ function RightPanel(props) {
   console.log('---------------' + isMizedOpen);
   return (
     <>
-      {
+      { 
         <div>
-          {windowWidth && <LeftPanel />}
+          
+          {windowWidth && <LeftPanel/>}
           <div
             className={`${
               props.stage === 3 ? 'stagethreeacc flex-col justify-end pb-4' : ''
             } accordionAndCTA flex  flex-col  justify-end pb-4 ${
-              allMaximize && 'minimizeMenu'
-            } ${accordionOpen && 'hideMixed'}`}
+              allMaximize ? ' minimizeMenu': ''
+            } ${isMizedOpen ? ' hideMixed' : ''}`}
           >
-            {!isMizedOpen && (
-              <div style={{display:'flex'}}>
-                <UpAccordion stage={2}>
-                  {/* <div>Accourdion Up</div> */}
+            
+            <UpAccordion stage={2}>
+              {/* <div>Accourdion Up</div> */}
 
-                  <div className="text-white mb-2">Glove Foundation</div>
-                  <div className="overScroll">
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>Option</div>
-                      <div>Value</div>
-                    </div>
-                  </div>
-                </UpAccordion>
-                <button className="cta rightButtonCTA">
-                  <p>
-                    {props.stage === 3 &&
-                      windowWidth &&
-                      !accordionOpen &&
-                      'Call to action'}
-
-                    {props.stage === 3 &&
-                      windowWidth &&
-                      accordionOpen &&
-                      'Primary'}
-                    {props.stage === 2 &&
-                      windowWidth &&
-                      !accordionOpen &&
-                      'Call to action'}
-                    {props.stage === 2 &&
-                      windowWidth &&
-                      accordionOpen &&
-                      'Primary'}
-                    {props.stage === 2 &&
-                      !windowWidth &&
-                      !accordionOpen &&
-                      'Call to action'}
-                    {props.stage === 2 &&
-                      !windowWidth &&
-                      accordionOpen &&
-                      'Call to action'}
-                  </p>
-                  <span>&rarr;</span>
-                </button>
+              <div className="text-white mb-2">Glove Foundation</div>
+              <div className="overScroll">
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
+                <div className="flex justify-between">
+                  <div>Option</div>
+                  <div>Value</div>
+                </div>
               </div>
-            )}
+            </UpAccordion>
+            <button className="cta rightButtonCTA">
+              <p>
+                {props.stage === 3 &&
+                  windowWidth &&
+                  !accordionOpen &&
+                  'Call to action'}
+
+                {props.stage === 3 && windowWidth && accordionOpen && 'Primary'}
+                {props.stage === 2 &&
+                  windowWidth &&
+                  !accordionOpen &&
+                  'Call to action'}
+                {props.stage === 2 && windowWidth && accordionOpen && 'Primary'}
+                {props.stage === 2 &&
+                  !windowWidth &&
+                  !accordionOpen &&
+                  'Call to action'}
+                {props.stage === 2 &&
+                  !windowWidth &&
+                  accordionOpen &&
+                  'Call to action'}
+              </p>
+              <span>&rarr;</span>
+            </button>
           </div>
         </div>
       }
