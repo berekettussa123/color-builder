@@ -76,9 +76,12 @@
       // background-color: #161616;
       // // padding-top: 200px;
       // ----------------------------
-      min-height: auto;
-      // position: fixed !important;
-      top: 5px !important;
+      min-height: 20rem;
+      position: fixed !important;
+
+      bottom: 0;
+      // top: 5px !important;
+      overflow-y: scroll;
       left: 1rem;
       // left: 0 !important;
       width: 92% !important;
