@@ -33,9 +33,13 @@
     flex-direction: column;
     overflow: hidden;
   }
-  .left-panel,
+  .left-panel{
+    flex: 5 !important;
+  }
   .right-panel {
+    flex: 1 !important;
     // margin-top: 5rem !important;
+
   }
   .main-container {
     width: 100vw;
@@ -62,13 +66,16 @@
     }
   }
   .main-container {
+    height: 100vh;
+    background-color: aqua !important;
     .center-panel {
+      flex: 1;
       // background-color: aliceblue;
       // min-width: 100px !important;
       // height: 10vh !important;
       // margin-top: 5rem !important;
 
-      // order: 1;
+      order: 1;
       // // z-index: 9000;
       // margin-bottom: 3rem;
       // z-index: -9999999;
