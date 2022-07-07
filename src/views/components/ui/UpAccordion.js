@@ -26,6 +26,7 @@ function UpAccordion (props) {
     {stage === 3 ?
       (<div className={` ${open ? ' openAccordion' : ''} up-accordion `}>
       <button
+      
         className="w-full"
         onClick={() => setOpen(!open)}
       >
@@ -62,9 +63,10 @@ function UpAccordion (props) {
     </div>):(<div className={` ${open ? ' openAccordion' : ''} up-accordion ${accordionOpen ? " acccccord":""}`}>
       <button
         className="w-full"
+        style={{zIndex:'22222'}}
         onClick={() => setOpen(!open)}
       >
-        <div onClick={()=>{dispatch({ type: 'ACCORDIONOPEN' })}}  className="accordion-button h-14 py-3.5 px-6 flex items-center">
+        <div style={{zIndex:'2222299999999999'}} onClick={()=>{dispatch({ type: 'ACCORDIONOPEN' })}}  className="accordion-button h-14 py-3.5 px-6 flex items-center">
             <h3 className="grow text-left">{props.title || "Accordion"} <span className="showExtenstion">Up</span></h3>
           <div className={`arrow${open ? ' active' : ''} flex items-center mr-2 grow-0`}>
             <svg

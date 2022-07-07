@@ -241,8 +241,8 @@ p {
     z-index: -2;
     // background-color: aqua;
     overflow-y: scroll !important;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 5rem;
     // z-index: 1111111111111 !important;
   }
   .minimizeAll{
@@ -259,7 +259,7 @@ p {
     align-items: center;
     // align-self: flex-end;
     gap: 1.8rem !important;
-    z-index: 999;
+    // z-index: 999;
     // height: 30px;
   }
   .accordionAndCTA {
