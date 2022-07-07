@@ -51,6 +51,9 @@
   .hideMixedAcc{
     display: none;
   }
+  .hideMixed{
+    display: none;
+  }
   .option-accordion-small {
   }
   .openMixed {
@@ -81,7 +84,7 @@
       bottom: 5px !important;
       left: 1rem;
       // left: 0 !important;
-      width: 92% !important;
+      width: 100% !important;
       align-self: center;
       margin-left: 1px;
       // min-height: 50% !important;

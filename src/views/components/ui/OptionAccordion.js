@@ -94,8 +94,8 @@ function OptionAccordion(props) {
         </div>
       )}
       {(props.title === 'Mixed Options' && windowWidth) && (
-        <div className={`accordion-body mixedAcc ${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+        <div className={`mobileMixed mixedAcc ${open ? ' ' : ''}`}>
+          <div className=" py-3.5 px-6">
             {props.children}
           </div>
         </div>
