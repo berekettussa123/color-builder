@@ -22,13 +22,14 @@ function LeftPanel(props) {
     };
     setState(newState);
   };
+  console.log("**********" + props.stage)
   return (
     <div style={{ marginTop: '5rem' }}>
       {
       ((!allMaximize && !windowWidth)||(allMaximize && !windowWidth)||(!allMaximize && windowWidth))&&
         
       <>
-      {windowWidth && <MiddleContainer/>}
+      {(windowWidth && !props.stage==="three") && <MiddleContainer/>}
         <OptionAccordion
         title="Mixed Options"
         stage={props.stage}

@@ -21,7 +21,7 @@ function RightPanel(props) {
       { 
         <div>
           
-          {windowWidth && <LeftPanel/>}
+          { (windowWidth && props.stage==="three") && <LeftPanel/>}
           <div
             className={`${
               props.stage === 3 ? 'stagethreeacc flex-col justify-end pb-4' : ''
