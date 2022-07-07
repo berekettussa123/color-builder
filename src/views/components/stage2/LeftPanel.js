@@ -676,8 +676,8 @@ function LeftPanel(props) {
             </div>
           </button> 
       </OptionAccordion>
-      <div style={{ height: '1.2rem' }}></div>
-      <div className="gradients"></div>
+      {/* <div style={{ height: '1.2rem' }}></div>
+      <div className="gradients"></div> */}
     </div>
   );
 }
