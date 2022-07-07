@@ -13,9 +13,9 @@ function MainContainer(props) {
       {/* <main className={`${accordionOpen&&"hideLeftPanel "} center-panel  px-5`}>
         { props.children }
       </main> */}
-      {/* <div className="right-panel  px-5">
+      <div className="right-panel  px-5">
         { props.rightPanel }
-      </div> */}
+      </div>
     </div>
   );
 }
