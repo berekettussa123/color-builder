@@ -7,19 +7,17 @@ function OptionAccordion(props) {
   const [open, setOpen] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
   const { singleOpened, arrowUp,accordionOpen } = useContext(IsopenContext);
-  const [tobeMax, setTobeMax] = useState("")
+  
   const { isMizedOpen,dispatch } = useContext(IsopenContext);
   const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
 
-  // console.log("----------------"+accordionOpen)
+  console.log("hiiiiii"+isMizedOpen)
   const handleClick = () => {
     dispatch({ type: 'MIXEDOPENSHOW' });
-    setTobeMax(true)
   };
-  console.log(">>>>>>>>>"+isMizedOpen)
   // const isOpenedClicked = () => {
   //   // setIsOpened(!isOpened);
   //   // console.log('7777777777777  ' + isOpened);
@@ -105,7 +103,7 @@ function OptionAccordion(props) {
     </div>) :(<div
       // onClick={isOpenedClicked}
       
-      className={`option-accordion${open ? ' open' : `${tobeMax && ' NotOpened'}`} ${isMizedOpen && "FirstClosed"}`}
+      className={`option-accordion${open ? ' open' : ''} ${isMizedOpen && "FirstClosed"}`}
     >
       <button className="w-full" onClick={openButton}>
         {(isMizedOpen && windowWidth) &&<MiddleContainer/>}
