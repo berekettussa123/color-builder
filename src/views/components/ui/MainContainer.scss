@@ -33,14 +33,14 @@
     flex-direction: column;
     overflow: hidden;
   }
-  // .left-panel{
-  //   flex: 5 !important;
-  // }
-  // .right-panel {
-  //   flex: 1 !important;
-  //   // margin-top: 5rem !important;
+  .left-panel{
+    flex: 7 !important;
+  }
+  .right-panel {
+    flex: 1 !important;
+    // margin-top: 5rem !important;
 
-  // }
+  }
   .main-container {
     width: 100vw;
     display: flex;
