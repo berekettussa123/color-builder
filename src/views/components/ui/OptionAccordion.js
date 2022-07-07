@@ -14,7 +14,7 @@ function OptionAccordion(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
 
- 
+  console.log("----------------"+accordionOpen)
   const handleClick = () => {
     dispatch({ type: 'MIXEDOPENSHOW' });
   };

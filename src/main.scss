@@ -252,14 +252,14 @@ p {
     opacity: 0;
   }
   .accordionAndCTA {
-    // position: fixed;
-    // width: 100%;
-    // bottom: -1rem;
-    // display: flex;
-    // flex-direction: row;
-    // align-self: flex-end;
-    // gap: 1.3rem !important;
-    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: -1rem;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    gap: 1.3rem !important;
+    
     // height: 30px;
   }
   .accordionAndCTA {
