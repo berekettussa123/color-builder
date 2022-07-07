@@ -4,6 +4,8 @@ import "./MainContainer.scss";
 
 function MainContainer(props) {
   const {accordionOpen } = useContext(IsopenContext);
+
+  console.log("--------------" + accordionOpen);
   return (
     <div className="main-container flex">
 

@@ -256,15 +256,18 @@ p {
     bottom: -1rem;
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
-    gap: 1.3rem !important;
+    align-items: center;
+    // align-self: flex-end;
+    gap: 1.8rem !important;
     // height: 30px;
   }
   .accordionAndCTA {
+    
     .rightButtonCTA {
       display: flex;
 
       height: 56px;
+      background-color: red;
       // flex-direction: row-reverse;
       margin-bottom: 20px;
       margin-right: 2.5rem;
