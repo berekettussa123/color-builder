@@ -18,7 +18,7 @@
   }
   .left-panel,
   .right-panel {
-    height: calc(100vh - 4rem);
+    // height: calc(100vh - 4rem);
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     &::-webkit-scrollbar {
@@ -34,8 +34,10 @@
     overflow: hidden;
   }
   .left-panel{
+    flex: 7 !important;
   }
   .right-panel {
+    flex: 1;
     // margin-top: 5rem !important;
 
   }
@@ -68,6 +70,7 @@
     // margin-top: 5rem;
     background-color: aqua !important;
     .center-panel {
+      flex: 1;
       // background-color: aliceblue;
       // min-width: 100px !important;
       // height: 10vh !important;
@@ -108,7 +111,7 @@
     z-index: -8888888888888888;
   }
   .left-panel {
-    z-index: 33;
+    z-index: 33222222222222222222;
     // height: 40vh !important;
     // background-color: aqua;
     
