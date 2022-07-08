@@ -79,6 +79,8 @@
   display: flex;
 }
 .primaryButton{
+  display: flex;
+  justify-content: space-between;
   color: black;
   background-color: #FFFF;
 }
