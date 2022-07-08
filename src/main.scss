@@ -244,11 +244,18 @@ p {
     position: fixed;
     bottom: 5rem;
     // z-index: 1111111111111 !important;
-    .leftContaineropen{
-      bottom: 1rem !important;
-    }
   }
-  
+  .leftContaineropen{
+    height: 50vh;
+   width: 95%;
+    
+    z-index: 20000000000;
+    // background-color: aqua;
+    overflow-y: scroll !important;
+    position: fixed;
+    bottom: 0;
+
+  }
   .minimizeAll{
     transform: translateY(600px);
     transition: all 0.4s ease-in;
