@@ -245,6 +245,9 @@ p {
     bottom: 5rem;
     // z-index: 1111111111111 !important;
   }
+  .leftContaineropen{
+    bottom: 0 !important;
+  }
   .minimizeAll{
     transform: translateY(600px);
     transition: all 0.4s ease-in;
