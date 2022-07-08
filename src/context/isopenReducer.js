@@ -30,10 +30,24 @@ const IsopenReducer = (state, action) => {
           accordionOpen: !state.accordionOpen,
         };
       }
+      case "FIRSTSTAGE": {
+        return {
+          firstStage: !state.firstStage,
+        };
+      }
+      case "SECONDSTAGE": {
+        return {
+          secondStage: !state.secondStage,
+        };
+      }
+      case "THIRDSTAGE": {
+        return {
+          thirdStage: !state.thirdStage,
+        };
+      }
       default:
         return state;
     }
   };
-  
   export default IsopenReducer;
   

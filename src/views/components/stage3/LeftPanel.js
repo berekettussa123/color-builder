@@ -23,7 +23,7 @@ function LeftPanel(props) {
     setState(newState);
   };
   return (
-    <div style={{ marginTop: '5rem' }}>
+    <div style={{ marginTop: '5rem' ,position:'absolute',bottom:'15rem'}}>
       {
       ((!allMaximize && !windowWidth)||(allMaximize && !windowWidth)||(!allMaximize && windowWidth))&&
         

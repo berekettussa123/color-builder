@@ -15,7 +15,7 @@ function OptionAccordion(props) {
   }, []);
 
   const handleClick = () => {
-    dispatch({ type: 'MIXEDOPENSHOW' });
+     dispatch({ type: 'MIXEDOPENSHOW' });
   };
   // const isOpenedClicked = () => {
   //   // setIsOpened(!isOpened);
@@ -93,11 +93,11 @@ function OptionAccordion(props) {
         </div>
       )}
       {(props.title === 'Mixed Options' && windowWidth) && (
-        <div className={`mobileMixed mixedAcc ${open ? ' ' : ''}`}>
-          <div className=" py-3.5 px-6">
-            {props.children}
-          </div>
+        <div className={`accordion-body mixedAcc ${open ? ' active' : ''}`}>
+        <div className="accordion-body-content-mixed py-3.5 px-6">
+          {props.children}
         </div>
+      </div>
       )}
     </div>) :(<div
       // onClick={isOpenedClicked}

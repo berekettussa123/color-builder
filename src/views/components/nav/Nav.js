@@ -1,10 +1,27 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { IsopenContext } from '../../../context/isopenContext';
 import './Nav.css';
 function Nav() {
   const [open, setOpen] = useState(false);
   const [stage, setStage] = useState();
-  console.log('stage is --------' + stage);
+  const { allMaximize, dispatch, isMizedOpen,firstStage,secondStage,thirdStage } = useContext(IsopenContext);
+
+  console.log('stage is --------' + firstStage,secondStage,thirdStage);
+  
+  const handleFirst=()=>{
+    dispatch({type:'FIRSTSTAGE'})
+  //  window.location.reload(false)
+   
+  }
+  const handleSecond=()=>{
+     dispatch({type:'SECONDSTAGE'})
+    // window.location.reload(false)
+  }
+  const handleThird=()=>{
+     dispatch({type:'THIRDSTAGE'})
+    // window.location.reload(false)
+  }
   return (
     <nav id="mainNav">
       <h1 className="logo">LOGO</h1>
@@ -63,6 +80,7 @@ function Nav() {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? 'active' : 'not-active')}
+            onClick={handleFirst}
           >
             {' '}
             Stage 1{' '}
@@ -71,6 +89,7 @@ function Nav() {
           <NavLink
             to="/stage-two"
             className={({ isActive }) => (isActive ? 'active' : 'not-active')}
+            onClick={handleSecond}
           >
             {' '}
             Stage 2{' '}
@@ -78,6 +97,7 @@ function Nav() {
           <NavLink
             to="/stage-three"
             className={({ isActive }) => (isActive ? 'active' : 'not-active')}
+            onClick={handleThird}
           >
             {' '}
             Stage 3{' '}
