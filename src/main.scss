@@ -244,10 +244,11 @@ p {
     position: fixed;
     bottom: 5rem;
     // z-index: 1111111111111 !important;
+    .leftContaineropen{
+      bottom: 1rem !important;
+    }
   }
-  .leftContaineropen{
-    bottom: 1rem !important;
-  }
+  
   .minimizeAll{
     transform: translateY(600px);
     transition: all 0.4s ease-in;
