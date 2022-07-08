@@ -129,6 +129,11 @@
   }
 }
 @media (max-width: 920px) {
+
+  .centerSecond{
+    display: none !important;
+  }
+
   .hideLeftMenu {
     display: none;
     z-index: -8888888888888888;
