@@ -52,9 +52,10 @@ function OptionAccordion(props) {
       id=""
       className={`option-accordion ${open ? ' openMixed' : ' '}`}
     >
+      {windowWidth &&<MiddleContainer/>}
       <button className="w-full" onClick={openButton}>
         <div
-          onClick={handleClick}
+          onClick={!props.stage===3&& handleClick}
           className={` ${accordionOpen && 'hideMixedAcc'} accordion-header  h-14 py-3.5 px-6 flex items-center`}
         >
           <div

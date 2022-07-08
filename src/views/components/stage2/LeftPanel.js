@@ -102,7 +102,7 @@ function LeftPanel(props) {
        {!isMizedOpen && <div style={{position:'fixed',zIndex:'11111111111', marginBottom:'2rem !important'}}>
           <MiddleContainer />
         </div>}
-        <div  className={`${isMizedOpen ? "marginCenterNO" :'marginCenterYES'}`} >
+        <div  className={`${isMizedOpen ? "marginCenterNO" :'marginCenterYES'}`} style={{marginTop:'0rem'}}>
         {/* <div className="gradients"></div> */}
         <OptionAccordion
           stage="two"
