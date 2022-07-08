@@ -53,7 +53,7 @@ function OptionAccordion(props) {
       
       className={`option-accordion mixedoptions ${open ? ' openMixed' : ' '}`}
     >
-      {windowWidth &&<MiddleContainer stage={3}/>}
+      {/* { windowWidth &&<MiddleContainer stage={3}/>} */}
       <button className="w-full" onClick={openButton}>
         <div
           onClick={!props.stage===3&& handleClick}
