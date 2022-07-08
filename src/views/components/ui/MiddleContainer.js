@@ -12,7 +12,7 @@ function MiddleContainer(props) {
     <div className= {`${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 ${allMaximize && "iconsMinimize"}`}>
       <div className="middle-container-content flex-1 w-full">
       </div>
-      <div className={` ${props.stage==="two" && "stageTwoCenter"}  ${props.stage==="three" && " stageThreeCenter "} middle-container-menu flex flex-col justify-center items-center`}>
+      <div className={` ${props.stage==="two" && "stageTwoCenter"}  ${props.stage===3 ? " stageThreeCenter " : ''} middle-container-menu flex flex-col justify-center items-center`}>
         <div className="navigation-dots flex my-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
