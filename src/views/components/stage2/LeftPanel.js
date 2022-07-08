@@ -200,10 +200,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
