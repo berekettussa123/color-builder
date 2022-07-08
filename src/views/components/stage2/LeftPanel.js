@@ -148,10 +148,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -226,7 +225,7 @@ function LeftPanel(props) {
               </svg>
             </div>
           </button>
-          {windowWidth &&<button className="inlineButton primaryButton" 
+          {windowWidth &&<button className="primaryButton" 
           // onClick={handlebutton}
           >
            <div>Primary</div>
@@ -271,10 +270,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -370,10 +368,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -418,10 +415,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -471,10 +467,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -528,10 +523,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -579,10 +573,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>
@@ -645,10 +638,9 @@ function LeftPanel(props) {
         <div
           className="buttonLine"
           style={{
-            width: '400px',
-            left: '-25px',
+            width: '120%',
+            marginLeft:'-28px',
             height: '10px',
-            position: 'relative',
             backgroundColor: 'black',
           }}
         ></div>

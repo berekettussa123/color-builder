@@ -79,8 +79,9 @@
   display: flex;
 }
 .primaryButton{
-  color: black;
-  background-color: #FFFF;
+  color: black !important;
+  background-color: #FFFF !important;
+  margin-left: 1rem;
 }
 .inlineButton:hover{
   background-color: 222222;
@@ -90,9 +91,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
+  background-color: #222222 !important;
+  // align-items: center;
+  gap: 2rem !important;
+  
 }
 // .open{
 //   background-color: white;
