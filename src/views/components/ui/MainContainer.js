@@ -10,7 +10,7 @@ function MainContainer(props) {
   return (
     <div className="main-container flex">
 
-      <div className={`${accordionOpen&&"hideLeftPanel "} left-panel  px-5 overflow-y-auto`}>
+      <div className={`${accordionOpen ? "hideLeftPanel " : ''} left-panel  px-5 overflow-y-auto`}>
         { props.leftPanel }
       </div>
       {/* <main className={`${accordionOpen&&"hideLeftPanel "} center-panel  px-5`}>

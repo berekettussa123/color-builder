@@ -173,6 +173,12 @@ p {
 }
 @media (min-width: 920px) {
  
+  .marginCenterNO{
+    margin-top: 0rem !important;
+  }
+  .marginCenterYES{
+    margin-top: 4rem;
+  }
   .leftContainers{
     margin-top: 5rem;
   }

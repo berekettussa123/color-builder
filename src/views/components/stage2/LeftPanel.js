@@ -102,7 +102,7 @@ function LeftPanel(props) {
        {!isMizedOpen && <div style={{position:'fixed',zIndex:'11111111111', marginBottom:'2rem !important'}}>
           <MiddleContainer />
         </div>}
-        <div  style={{marginTop:'3rem'}}>
+        <div  className={`${isMizedOpen ? "marginCenterNO" :'marginCenterYES'}`} >
         {/* <div className="gradients"></div> */}
         <OptionAccordion
           stage="two"
@@ -387,7 +387,7 @@ function LeftPanel(props) {
             }}
           ></div>
           <button className="inlineButton" onClick={handlebutton}>
-            <div>Secondary</div>
+            <div>Primary</div>
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -432,10 +432,7 @@ function LeftPanel(props) {
               backgroundColor: 'black',
             }}
           ></div>
-          <button
-            className="inlineButton"
-            // onClick={handlebutton}
-          >
+          <button className="inlineButton" onClick={handlebutton}>
             <div>Primary</div>
             <div className="iconButt">
               <svg

@@ -28,7 +28,7 @@ function LeftPanel(props) {
       ((!allMaximize && !windowWidth)||(allMaximize && !windowWidth)||(!allMaximize && windowWidth))&&
         
       <>
-      {<MiddleContainer/>}
+      {/* {<MiddleContainer/>} */}
         <OptionAccordion
         title="Mixed Options"
         stage={props.stage}
