@@ -13,9 +13,10 @@ import { useContext } from 'react';
 import { IsopenContext } from '../../../context/isopenContext';
 import ColorCircle2 from '../ui/ColorCircle2';
 import { useEffect } from 'react';
+import MiddleContainer from '../ui/MiddleContainer';
 
 function LeftPanel(props) {
-  const { singleOpened ,dispatch} = useContext(IsopenContext);
+  const { singleOpened, dispatch } = useContext(IsopenContext);
   const [state, setState] = useState({});
   const [show, setShow] = useState(false);
   const [showBuild, setShowBuild] = useState(false);
@@ -29,8 +30,8 @@ function LeftPanel(props) {
   const [both2, setBoth2] = useState(
     state.colorOption2 && state.colorOption2.value
   );
-  const { allMaximize, arrowUp,isMizedOpen } =  useContext(IsopenContext);
-  const {accordionOpen } = useContext(IsopenContext);
+  const { allMaximize, arrowUp, isMizedOpen } = useContext(IsopenContext);
+  const { accordionOpen } = useContext(IsopenContext);
 
   const showModal = () => {
     setShow(true);
@@ -42,15 +43,13 @@ function LeftPanel(props) {
 
   const showBuildModal = () => {
     setShowBuild(true);
-    dispatch({ type: 'SINGLEOPENED' })
-    
+    dispatch({ type: 'SINGLEOPENED' });
   };
 
   const hideBuildModal = () => {
     setShowBuild(false);
     // dispatch({ type: 'ARROWUP' });
   };
-  
 
   const setOptions = (value, option) => {
     const newState = {
@@ -94,25 +93,32 @@ function LeftPanel(props) {
     // setOptions('colorOption', option)
     // console.log(state.colorOption2.value );
   };
-  
-  return (
-    <div className={`${ isMizedOpen? " LeftContainerOpen " : "leftContainers" }`}>
-      {/* <div className="gradients"></div> */}
-      <OptionAccordion
-        stage="two"
-        showBuildModal={showBuildModal}
-        showBuild={showBuild}
-        title="Build"
-        selectedOption={state.imageOption && state.imageOption.value}
-      >
-        <BuildModal
-          title="Build Modal Me"
-          stage="two"
-          show={showBuild}
-          handleClose={hideBuildModal}
-        />
 
-        {/* <SelectImage
+  return (
+    <>
+      <div
+        className={`${isMizedOpen ? ' LeftContainerOpen ' : 'leftContainers'}`}
+      >
+        <div style={{position:'fixed',zIndex:'11111111111',marginBottom:'2rem !important'}}>
+          <MiddleContainer />
+        </div>
+        <div style={{marginTop:'2rem'}}>
+        {/* <div className="gradients"></div> */}
+        <OptionAccordion
+          stage="two"
+          showBuildModal={showBuildModal}
+          showBuild={showBuild}
+          title="Build"
+          selectedOption={state.imageOption && state.imageOption.value}
+        >
+          <BuildModal
+            title="Build Modal Me"
+            stage="two"
+            show={showBuild}
+            handleClose={hideBuildModal}
+          />
+
+          {/* <SelectImage
           options={[
             {
               title: "Option Title",
@@ -140,95 +146,25 @@ function LeftPanel(props) {
             },
           ]}
         /> */}
-      </OptionAccordion>
-      <OptionAccordion  title="TextInput" selectedOption={state.textOption}>
-        <SelectInput
-          onSelection={(option) => setOptions('textOption', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <button className="inlineButton" 
-        // onClick={handlebutton}
-        >
-            <div>Primary</div> 
-            <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="white"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
-            </div>
-          </button>
-      </OptionAccordion>
-      <OptionAccordion
-      
-        title="Color Option1"
-        selectedOption={<ColorCircle color={both} />}
-      >
-        <SelectColor
-          colors={[
-            { value: '#AD1457' },
-            { value: '#C62828' },
-            { value: '#4527A0' },
-            { value: '#6A1B9A' },
-            { value: '#1565C0' },
-            { value: '#283593' },
-            { value: '#0277BD' },
-            { value: '#00838F' },
-            { value: '#00695C' },
-            { value: '#2E7D32' },
-          ]}
-          onSelection={(option) => setOptions('colorOption', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-       <div className="buttonAndIcon">
-          <button className="inlineButton" onClick={handlebutton2}>
-            <div>Secondary</div>
-            <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="white"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
-            </div>
-          </button>
-          {windowWidth &&<button className="primaryButton" 
-          // onClick={handlebutton}
+        </OptionAccordion>
+        <OptionAccordion title="TextInput" selectedOption={state.textOption}>
+          <SelectInput
+            onSelection={(option) => setOptions('textOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <button
+            className="inlineButton"
+            // onClick={handlebutton}
           >
-           <div>Primary</div>
+            <div>Primary</div>
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -240,43 +176,216 @@ function LeftPanel(props) {
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill="black"
+                  fill="white"
                   d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
                 />
               </svg>
             </div>
-          </button>}
-        </div>
-      </OptionAccordion>
-      <OptionAccordion
-        title="Color Option2"
-        selectedOption={<ColorCircle2 color={both2} />}
-      >
-        <SelectColor2
-          colors={[
-            { value: '#AD1457' },
-            { value: '#4527A0' },
-            { value: '#283593' },
-            { value: '#0277BD' },
-            { value: '#C62828' },
-            { value: '#6A1B9A' },
-            { value: '#1565C0' },
-            { value: '#00838F' },
-            { value: '#00695C' },
-            { value: '#2E7D32' },
-          ]}
-          onSelection={(option) => setOptions('colorOption2', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <div className="buttonAndIcon">
+          </button>
+        </OptionAccordion>
+        <OptionAccordion
+          title="Color Option1"
+          selectedOption={<ColorCircle color={both} />}
+        >
+          <SelectColor
+            colors={[
+              { value: '#AD1457' },
+              { value: '#C62828' },
+              { value: '#4527A0' },
+              { value: '#6A1B9A' },
+              { value: '#1565C0' },
+              { value: '#283593' },
+              { value: '#0277BD' },
+              { value: '#00838F' },
+              { value: '#00695C' },
+              { value: '#2E7D32' },
+            ]}
+            onSelection={(option) => setOptions('colorOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <div className="buttonAndIcon">
+            <button className="inlineButton" onClick={handlebutton2}>
+              <div>Secondary</div>
+              <div className="iconButt">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  width="14"
+                  height="14"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="white"
+                    d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
+                  />
+                </svg>
+              </div>
+            </button>
+            {windowWidth && (
+              <button
+                className="primaryButton"
+                // onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="14"
+                    height="14"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="black"
+                      d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            )}
+          </div>
+        </OptionAccordion>
+        <OptionAccordion
+          title="Color Option2"
+          selectedOption={<ColorCircle2 color={both2} />}
+        >
+          <SelectColor2
+            colors={[
+              { value: '#AD1457' },
+              { value: '#4527A0' },
+              { value: '#283593' },
+              { value: '#0277BD' },
+              { value: '#C62828' },
+              { value: '#6A1B9A' },
+              { value: '#1565C0' },
+              { value: '#00838F' },
+              { value: '#00695C' },
+              { value: '#2E7D32' },
+            ]}
+            onSelection={(option) => setOptions('colorOption2', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <div className="buttonAndIcon">
+            <button className="inlineButton" onClick={handlebutton}>
+              <div>Secondary</div>
+              <div className="iconButt">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  width="14"
+                  height="14"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="white"
+                    d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
+                  />
+                </svg>
+              </div>
+            </button>
+            {windowWidth && (
+              <button
+                className="inlineButton primaryButton"
+                // onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="14"
+                    height="14"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="black"
+                      d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            )}
+          </div>{' '}
+        </OptionAccordion>
+
+        <OptionAccordion
+          title="Dual Color"
+          selectedOption={
+            <div className="flex">
+              <ColorCircle
+                color={state.dualColorOption1 && state.dualColorOption1.value}
+              />
+              <ColorCircle
+                color={state.dualColorOption2 && state.dualColorOption2.value}
+              />
+            </div>
+          }
+        >
+          <SelectColor
+            subtitle="Primary Color"
+            colors={[
+              { value: '#C62828' },
+              { value: '#AD1457' },
+              { value: '#6A1B9A' },
+              { value: '#4527A0' },
+              { value: '#283593' },
+              { value: '#1565C0' },
+              { value: '#0277BD' },
+              { value: '#00838F' },
+              { value: '#00695C' },
+              { value: '#2E7D32' },
+            ]}
+            onSelection={(option) => setOptions('dualColorOption1', option)}
+          />
+          <SelectColor
+            subtitle="Secondary Color"
+            colors={[
+              { value: '#C62828' },
+              { value: '#AD1457' },
+              { value: '#6A1B9A' },
+              { value: '#4527A0' },
+              { value: '#283593' },
+              { value: '#1565C0' },
+              { value: '#0277BD' },
+              { value: '#00838F' },
+              { value: '#00695C' },
+              { value: '#2E7D32' },
+            ]}
+            onSelection={(option) => setOptions('dualColorOption2', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
           <button className="inlineButton" onClick={handlebutton}>
             <div>Secondary</div>
             <div className="iconButt">
@@ -296,86 +405,38 @@ function LeftPanel(props) {
               </svg>
             </div>
           </button>
-          {windowWidth && <button className="inlineButton primaryButton" 
-          // onClick={handlebutton}
+        </OptionAccordion>
+        <OptionAccordion
+          title="2 Options"
+          selectedOption={state.firstOption && state.firstOption.text}
+        >
+          <Select
+            options={[
+              {
+                text: 'Option1',
+                value: 1,
+              },
+              {
+                text: 'Option2',
+                value: 2,
+              },
+            ]}
+            onSelection={async (option) => setOptions('firstOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <button
+            className="inlineButton"
+            // onClick={handlebutton}
           >
             <div>Primary</div>
-            <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
-            </div>
-          </button>}
-        </div>{' '}
-      </OptionAccordion>
-
-      <OptionAccordion
-        title="Dual Color"
-        selectedOption={
-          <div className="flex">
-            <ColorCircle
-              color={state.dualColorOption1 && state.dualColorOption1.value}
-            />
-            <ColorCircle
-              color={state.dualColorOption2 && state.dualColorOption2.value}
-            />
-          </div>
-        }
-      >
-        <SelectColor
-          subtitle="Primary Color"
-          colors={[
-            { value: '#C62828' },
-            { value: '#AD1457' },
-            { value: '#6A1B9A' },
-            { value: '#4527A0' },
-            { value: '#283593' },
-            { value: '#1565C0' },
-            { value: '#0277BD' },
-            { value: '#00838F' },
-            { value: '#00695C' },
-            { value: '#2E7D32' },
-          ]}
-          onSelection={(option) => setOptions('dualColorOption1', option)}
-        />
-        <SelectColor
-          subtitle="Secondary Color"
-          colors={[
-            { value: '#C62828' },
-            { value: '#AD1457' },
-            { value: '#6A1B9A' },
-            { value: '#4527A0' },
-            { value: '#283593' },
-            { value: '#1565C0' },
-            { value: '#0277BD' },
-            { value: '#00838F' },
-            { value: '#00695C' },
-            { value: '#2E7D32' },
-          ]}
-          onSelection={(option) => setOptions('dualColorOption2', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <button className="inlineButton" onClick={handlebutton}>
-            <div>Secondary</div> 
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -393,90 +454,42 @@ function LeftPanel(props) {
               </svg>
             </div>
           </button>
-      </OptionAccordion>
-      <OptionAccordion
-        title="2 Options"
-        selectedOption={state.firstOption && state.firstOption.text}
-      >
-        <Select
-          options={[
-            {
-              text: 'Option1',
-              value: 1,
-            },
-            {
-              text: 'Option2',
-              value: 2,
-            },
-          ]}
-          onSelection={async (option) => setOptions('firstOption', option)}
-      
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-      <button className="inlineButton" 
-      // onClick={handlebutton}
-      >
-            <div>Primary</div> 
-            <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="white"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
-            </div>
-          </button>  
-      </OptionAccordion>
-      <OptionAccordion
-      title="Title"
-        selectedOption={state.secondOption && state.secondOption.text}
-      >
-        <Select
-          options={[
-            {
-              text: 'Option 1',
-              value: 1,
-            },
-            {
-              text: 'Option 2',
-              value: 2,
-            },
-            {
-              text: 'Option 3',
-              value: 3,
-            },
-          ]}
-          onSelection={(option) => setOptions('secondOption', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <button className="inlineButton" 
-        // onClick={handlebutton}
+        </OptionAccordion>
+        <OptionAccordion
+          title="Title"
+          selectedOption={state.secondOption && state.secondOption.text}
         >
-            <div>Primary</div> 
+          <Select
+            options={[
+              {
+                text: 'Option 1',
+                value: 1,
+              },
+              {
+                text: 'Option 2',
+                value: 2,
+              },
+              {
+                text: 'Option 3',
+                value: 3,
+              },
+            ]}
+            onSelection={(option) => setOptions('secondOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <button
+            className="inlineButton"
+            // onClick={handlebutton}
+          >
+            <div>Primary</div>
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -493,47 +506,47 @@ function LeftPanel(props) {
                 />
               </svg>
             </div>
-          </button> 
-      </OptionAccordion>
-      <OptionAccordion
-      title="Title"
-        selectedOption={state.thirdOption && state.thirdOption.text}
-      >
-        <Select
-          options={[
-            {
-              text: 'Option 4',
-              value: 1,
-            },
-            {
-              text: 'Option 5',
-              value: 2,
-            },
-            {
-              text: 'Option 6',
-              value: 3,
-            },
-            {
-              text: 'Option 7',
-              value: 4,
-            },
-          ]}
-          onSelection={(option) => setOptions('thirdOption', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <button className="inlineButton" 
-        // onClick={handlebutton}
+          </button>
+        </OptionAccordion>
+        <OptionAccordion
+          title="Title"
+          selectedOption={state.thirdOption && state.thirdOption.text}
         >
-
-            <div>Secondary</div> 
+          <Select
+            options={[
+              {
+                text: 'Option 4',
+                value: 1,
+              },
+              {
+                text: 'Option 5',
+                value: 2,
+              },
+              {
+                text: 'Option 6',
+                value: 3,
+              },
+              {
+                text: 'Option 7',
+                value: 4,
+              },
+            ]}
+            onSelection={(option) => setOptions('thirdOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <button
+            className="inlineButton"
+            // onClick={handlebutton}
+          >
+            <div>Secondary</div>
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -550,39 +563,40 @@ function LeftPanel(props) {
                 />
               </svg>
             </div>
-          </button> 
-      </OptionAccordion>
-      <OptionAccordion
-        title="Title"
-        selectedOption={state.fourthOption && state.fourthOption.text}
-      >
-        <Select
-          subtitle="Subtitle"
-          options={[
-            {
-              text: 'Option A',
-              value: 1,
-            },
-            {
-              text: 'Option B',
-              value: 2,
-            },
-          ]}
-          onSelection={(option) => setOptions('fourthOption', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <button className="inlineButton" 
-        // onClick={handlebutton}
+          </button>
+        </OptionAccordion>
+        <OptionAccordion
+          title="Title"
+          selectedOption={state.fourthOption && state.fourthOption.text}
         >
-            <div>Primary</div> 
+          <Select
+            subtitle="Subtitle"
+            options={[
+              {
+                text: 'Option A',
+                value: 1,
+              },
+              {
+                text: 'Option B',
+                value: 2,
+              },
+            ]}
+            onSelection={(option) => setOptions('fourthOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <button
+            className="inlineButton"
+            // onClick={handlebutton}
+          >
+            <div>Primary</div>
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -599,55 +613,56 @@ function LeftPanel(props) {
                 />
               </svg>
             </div>
-          </button> 
-      </OptionAccordion>
-      <OptionAccordion
-      title="Title"
-        selectedOption={`${state.fifthOption ? state.fifthOption.text : ''} ${
-          state.sixthOption ? state.sixthOption.text : ''
-        }`}
-      >
-        <Select
-          subtitle="Subtitle"
-          options={[
-            {
-              text: 'Option 1',
-              value: 1,
-            },
-            {
-              text: 'Option 2',
-              value: 2,
-            },
-          ]}
-          onSelection={(option) => setOptions('fifthOption', option)}
-        />
-        <Select
-          subtitle="Subtitle"
-          options={[
-            {
-              text: 'Option 3',
-              value: 1,
-            },
-            {
-              text: 'Option 4',
-              value: 2,
-            },
-          ]}
-          onSelection={(option) => setOptions('sixthOption', option)}
-        />
-        <div
-          className="buttonLine"
-          style={{
-            width: '120%',
-            marginLeft:'-28px',
-            height: '10px',
-            backgroundColor: 'black',
-          }}
-        ></div>
-        <button className="inlineButton" 
-        // onClick={handlebutton}
+          </button>
+        </OptionAccordion>
+        <OptionAccordion
+          title="Title"
+          selectedOption={`${state.fifthOption ? state.fifthOption.text : ''} ${
+            state.sixthOption ? state.sixthOption.text : ''
+          }`}
         >
-            <div>Primary</div> 
+          <Select
+            subtitle="Subtitle"
+            options={[
+              {
+                text: 'Option 1',
+                value: 1,
+              },
+              {
+                text: 'Option 2',
+                value: 2,
+              },
+            ]}
+            onSelection={(option) => setOptions('fifthOption', option)}
+          />
+          <Select
+            subtitle="Subtitle"
+            options={[
+              {
+                text: 'Option 3',
+                value: 1,
+              },
+              {
+                text: 'Option 4',
+                value: 2,
+              },
+            ]}
+            onSelection={(option) => setOptions('sixthOption', option)}
+          />
+          <div
+            className="buttonLine"
+            style={{
+              width: '120%',
+              marginLeft: '-28px',
+              height: '10px',
+              backgroundColor: 'black',
+            }}
+          ></div>
+          <button
+            className="inlineButton"
+            // onClick={handlebutton}
+          >
+            <div>Primary</div>
             <div className="iconButt">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -664,11 +679,12 @@ function LeftPanel(props) {
                 />
               </svg>
             </div>
-          </button> 
-      </OptionAccordion>
-      {/* <div style={{ height: '1.2rem' }}></div>
+          </button>
+        </OptionAccordion>
+        </div>        {/* <div style={{ height: '1.2rem' }}></div>
       <div className="gradients"></div> */}
-    </div>
+      </div>
+    </>
   );
 }
 

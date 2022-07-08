@@ -21,6 +21,7 @@ function RightPanel(props) {
       {!isMizedOpen &&
         <div>
           
+          
           { (windowWidth && props.stage==="three") && <LeftPanel/>}
           <div
             className={`${
