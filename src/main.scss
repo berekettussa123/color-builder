@@ -241,12 +241,12 @@ p {
     z-index: 20000000000;
     // background-color: aqua;
     overflow-y: scroll !important;
-    position: absolute;
+    position: fixed;
     bottom: 5rem;
     // z-index: 1111111111111 !important;
   }
   .leftContaineropen{
-    bottom: 0 !important;
+    bottom: 1rem !important;
   }
   .minimizeAll{
     transform: translateY(600px);
