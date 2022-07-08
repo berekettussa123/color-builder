@@ -9,8 +9,8 @@ import LeftPanel from './LeftPanel';
 function RightPanel(props) {
   const { isMizedOpen, dispatch } = useContext(IsopenContext);
   const { allMaximize } = useContext(IsopenContext);
-  const [windowWidth, setWindowWidth] = useState();
   const { accordionOpen } = useContext(IsopenContext);
+  const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
@@ -18,7 +18,7 @@ function RightPanel(props) {
   console.log('---------------' + isMizedOpen);
   return (
     <>
-      {!isMizedOpen &&
+      {
         <div>
           
           { (windowWidth && props.stage==="three") && <LeftPanel/>}

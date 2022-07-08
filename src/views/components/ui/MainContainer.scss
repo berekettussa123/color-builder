@@ -4,16 +4,35 @@
 .main-container {
   width: auto;
 }
+@media (min-width: 920px){
+  .center-panel {
+    flex: 5 !important;
+    z-index: 9000000;
+    align-self: flex-end;
+
+  }
+  .left-panel {
+    flex: 2 !important;
+
+  }
+  .right-panel {
+    flex: 2 !important;
+
+  }
+}
+
 @media (max-width: 920px){
   .main-container {
     .center-panel {
   display: flex;
   flex-direction: column;
   min-width: 680px;
+  
     }}
 }
 .main-container {
   .center-panel {
+    flex: 5;
 
   }
   .left-panel,
@@ -73,7 +92,7 @@
     height: 100vh;
     // background-color: aqua !important;
     .center-panel {
-      flex: 1;
+      // flex: 1;
       // background-color: aliceblue;
       // min-width: 100px !important;
       // height: 10vh !important;

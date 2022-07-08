@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { IsopenContext } from "../../../context/isopenContext";
 import "./MiddleContainer.scss";
 
@@ -7,9 +7,13 @@ function MiddleContainer(props) {
   const {allMaximize,dispatch} = useContext(IsopenContext)
   console.log("i am middle -------- "+props.stage);
 
+  const [windowWidth, setWindowWidth] = useState();
+  useEffect(() => {
+    setWindowWidth(window.innerWidth && window.innerWidth <= 600);
+  }, []);
 // console.log("this is   "+allMaximize);
   return (
-    <div className= {`${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 ${allMaximize && "iconsMinimize"}`}>
+    <div className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 ${allMaximize && "iconsMinimize"}`}>
       <div className="middle-container-content flex-1 w-full">
       </div>
       <div className={` ${props.stage==="two" && "stageTwoCenter"}  ${props.stage===3 ? " stageThreeCenter " : ''} middle-container-menu flex flex-col justify-center items-center`}>
