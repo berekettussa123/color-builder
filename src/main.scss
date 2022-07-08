@@ -238,11 +238,11 @@ p {
     height: 50vh;
    width: 95%;
     
-    z-index: -2;
+    z-index: 20000000000;
     // background-color: aqua;
     overflow-y: scroll !important;
     position: absolute;
-    bottom: 5rem;
+    bottom: 0rem;
     // z-index: 1111111111111 !important;
   }
   .minimizeAll{
