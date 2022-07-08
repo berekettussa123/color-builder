@@ -50,6 +50,7 @@ function OptionAccordion(props) {
        (<div
       // onClick={isOpenedClicked}
       id=""
+      
       className={`option-accordion mixedoptions ${open ? ' openMixed' : ' '}`}
     >
       {windowWidth &&<MiddleContainer stage={3}/>}
