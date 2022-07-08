@@ -4,6 +4,7 @@ import "./MainContainer.scss";
 
 function MainContainer(props) {
   const {accordionOpen } = useContext(IsopenContext);
+  const { isMizedOpen,dispatch } = useContext(IsopenContext);
 
   console.log("--------------" + accordionOpen);
   return (
@@ -15,9 +16,9 @@ function MainContainer(props) {
       {/* <main className={`${accordionOpen&&"hideLeftPanel "} center-panel  px-5`}>
         { props.children }
       </main> */}
-      <div className="right-panel  px-5">
+      {!isMizedOpen && <div className="right-panel  px-5">
         { props.rightPanel }
-      </div>
+      </div>}
     </div>
   );
 }
