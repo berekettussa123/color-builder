@@ -48,6 +48,10 @@
 }
 
 @media (max-width: 920px) {
+  .mobileAccordion{
+    position: absolute;
+    left: 0;
+  }
   .hideMixedAcc{
     display: none;
   }
@@ -66,7 +70,9 @@
     // z-index: -999999999999999 !important;
     // background-color: aqua !important;
   }
-
+.accordion-body-content{
+  width: 100vw;
+}
   .option-accordion {
     width: 100vw;
     transform: scale(1);
@@ -83,6 +89,7 @@
       // background-color: #161616;
       // // padding-top: 200px;
       // ----------------------------
+      width: 100vw;
       min-height: 20rem;
       position: fixed !important;
 
@@ -91,7 +98,7 @@
       overflow-y: scroll;
       left: 1rem;
       // left: 0 !important;
-      width: 92% !important;
+      // width: 92% !important;
       align-self: center;
       margin-left: 1px;
       // min-height: 50% !important;

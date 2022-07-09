@@ -67,7 +67,7 @@ function UpAccordion (props) {
         onClick={() => setOpen(!open)}
       >
         <div style={{zIndex:'2222299999999999'}} onClick={()=>{dispatch({ type: 'ACCORDIONOPEN' })}}  className="accordion-button h-14 py-3.5 px-6 flex items-center">
-            <h3 className="grow text-left">{props.title || "Accordion"} <span className="showExtenstion">Up</span></h3>
+            <h3 className="mobileAccordion grow text-left">{props.title || "Accordion"} <span className="showExtenstion">Up</span></h3>
           <div className={`arrow${open ? ' active' : ''} flex items-center mr-2 grow-0`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
