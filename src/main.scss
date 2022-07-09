@@ -61,11 +61,13 @@
 .ininlineButtonPrimary{
   background-color: #FFFFFF !important;
   color: #222222 !important;
+  // color: wheat;
   position: relative;
   margin-left: -1.5rem;
 
-  width: 100vw !important;
+  width: 100% !important;
 }
+
 .inlineButton {
   font-size: 18px;
   background-color: #222222;
@@ -77,8 +79,13 @@
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 115%  !important;
   height: 56px;
+}
+@media (max-width: 920px) {
+  .inlineButton{
+    width: 110% !important;
+  }
 }
 .iconButt {
   display: flex;

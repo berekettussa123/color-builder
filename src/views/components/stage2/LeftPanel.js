@@ -213,7 +213,7 @@ function LeftPanel(props) {
             }}
           ></div>
           <div className="buttonAndIcon">
-            <button className="inlineButton" onClick={handlebutton2}>
+            <button className="inlineButton" onClick={handlebutton}>
               <div>Secondary</div>
               <div className="iconButt">
                 <svg
@@ -226,7 +226,7 @@ function LeftPanel(props) {
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill="black"
+                    fill="white"
                     d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
                   />
                 </svg>
@@ -234,7 +234,7 @@ function LeftPanel(props) {
             </button>
             {windowWidth && (
               <button
-                className="primaryButton"
+                className="inlineButton primaryButton"
                 // onClick={handlebutton}
               >
                 <div>Primary</div>
@@ -300,7 +300,7 @@ function LeftPanel(props) {
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill="black"
+                    fill="white"
                     d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
                   />
                 </svg>
