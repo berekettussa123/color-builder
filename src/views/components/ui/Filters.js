@@ -41,7 +41,7 @@ function Filters(props) {
         }
       </div>
       <select
-      style={{backgroundColor:'black',color:'red'}}
+      style={{backgroundColor:'black !important'}}
         className="filters-mobile"
         onChange={(e) => handleSelection(e.target.value)}
       >
@@ -49,6 +49,7 @@ function Filters(props) {
           props.filters.map((filter, index) => {
             return (
               <option
+              style={{backgroundColor:'black'}}
                 key={index}
                 value={filter}
               >{filter}</option>
