@@ -126,7 +126,7 @@ function LeftPanel(props) {
           <div className={`arrow} flex items-center mr-2 grow-0`}>
           <span>&larr;</span>
           </div>
-            <h3 className="mobileAccordion grow text-left">Back To Design<span className="showExtenstion">Up</span></h3>
+            <h3 className="mobileAccordion grow text-left">Back To Design</h3>
           {/* <p className="grow-0">{props.selectedOption || "Option"}</p> */}
         </div>
       </button> </NavLink> }</>

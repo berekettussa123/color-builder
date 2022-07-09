@@ -1,6 +1,7 @@
 // import { useState } from "react";
 
 import { useContext, useEffect, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { IsopenContext } from '../../../context/isopenContext';
 import UpAccordion from '../../components/ui/UpAccordion';
 import LeftPanel from '../stage3/LeftPanel';
@@ -12,6 +13,11 @@ function RightPanel(props) {
   const { allMaximize } = useContext(IsopenContext);
   const { accordionOpen } = useContext(IsopenContext);
   const [windowWidth, setWindowWidth] = useState();
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/stage-three`; 
+    navigate(path);
+  }
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
@@ -151,7 +157,10 @@ function RightPanel(props) {
                 </div>
               </div>
             </UpAccordion>
-            <button className="cta rightButtonCTA">
+
+                
+           
+            <button onClick={routeChange} className="cta rightButtonCTA">
               <p>
                 {props.stage === 3 &&
                   windowWidth &&
@@ -169,6 +178,7 @@ function RightPanel(props) {
               </p>
               <span>&rarr;</span>
             </button>
+            
           </div>
         </div>
       }
