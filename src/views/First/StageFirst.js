@@ -30,8 +30,8 @@ function StageFirst() {
   return (
     <div>
       <Nav />
-      <div>
-        <MainContainer>
+      <MainContainer>
+        <div style={{width:'100%',display:'flex',flexDirection:'column',alignItems:'flex-start'}}>
           <Hero handleOpen={showBuildModal} />
           <section className="elements">
             <div className="elements-container">
@@ -40,15 +40,15 @@ function StageFirst() {
               ))}
             </div>
           </section>
-        </MainContainer>
-        <Modal title="Modal Title" show={show} handleClose={hideModal} />
-        <BuildModal
-          stage="one"
-          title="Build Modal Title"
-          show={showBuild}
-          handleClose={hideBuildModal}
-        />
-      </div>
+        </div>
+      </MainContainer>
+      <Modal title="Modal Title" show={show} handleClose={hideModal} />
+      <BuildModal
+        stage="one"
+        title="Build Modal Title"
+        show={showBuild}
+        handleClose={hideBuildModal}
+      />
     </div>
   );
 }
