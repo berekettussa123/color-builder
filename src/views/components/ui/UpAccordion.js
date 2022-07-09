@@ -18,6 +18,7 @@ function UpAccordion (props) {
   }, [props.stage])
 
   console.log("000000000000------" +props.stage);
+  console.log("000000000000------" +props.second);
 
 
   return (

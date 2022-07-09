@@ -161,11 +161,11 @@ function LeftPanel(props) {
             }}
           ></div>
           <button
-            className="inlineButton"
+            className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
-            <div className="iconButt">
+            <div className="iconButt ininlineButtonPrimary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -386,7 +386,7 @@ function LeftPanel(props) {
               backgroundColor: 'black',
             }}
           ></div>
-          <button className="inlineButton" onClick={handlebutton}>
+          <button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
             <div>Primary</div>
             <div className="iconButt">
               <svg
@@ -432,7 +432,7 @@ function LeftPanel(props) {
               backgroundColor: 'black',
             }}
           ></div>
-          <button className="inlineButton" onClick={handlebutton}>
+          <button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
             <div>Primary</div>
             <div className="iconButt">
               <svg
@@ -483,7 +483,7 @@ function LeftPanel(props) {
             }}
           ></div>
           <button
-            className="inlineButton"
+            className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
@@ -540,7 +540,7 @@ function LeftPanel(props) {
             }}
           ></div>
           <button
-            className="inlineButton"
+            className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Secondary</div>
@@ -590,7 +590,7 @@ function LeftPanel(props) {
             }}
           ></div>
           <button
-            className="inlineButton"
+            className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
@@ -656,7 +656,7 @@ function LeftPanel(props) {
             }}
           ></div>
           <button
-            className="inlineButton"
+            className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>

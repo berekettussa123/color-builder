@@ -158,14 +158,14 @@ function OptionAccordion(props) {
             open ? ' active' : `${isOpened ? ' colorno' : ''}`
           }`}
         >
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {props.title === 'Color Option2' && (
         <div className={`accordion-body${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
             {/* <div className='primaryAndSecondary'>
               <button>Primary </button>
@@ -176,49 +176,49 @@ function OptionAccordion(props) {
       )}
       {props.title === 'Title' && (
         <div className={`accordion-body${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {props.title === '2 Options' && (
         <div className={`accordion-body${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {props.title === 'TextInput' && (
         <div className={`accordion-body${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {props.title === 'Dual Color' && (
         <div className={`accordion-body${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {props.title === 'Color Option' && (
         <div className={`accordion-body${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {(props.title === 'Mixed Options' && !windowWidth) && (
         <div className={`accordion-body mixedAcc ${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
       )}
       {(props.title === 'Mixed Options' && windowWidth) && (
         <div className={`accordion-body mixedAcc ${open ? ' active' : ''}`}>
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content pt-3.5 px-6">
             {props.children}
           </div>
         </div>
