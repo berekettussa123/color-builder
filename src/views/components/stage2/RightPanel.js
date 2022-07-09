@@ -16,7 +16,7 @@ function RightPanel(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
 
-  console.log('-------:::::::::::--------' + props.stage);
+  console.log('-------:::::::::::--------' + isMizedOpen);
   return (
     <>
       {
@@ -35,7 +35,7 @@ function RightPanel(props) {
 
               {/* <div>Accourdion Up</div> */}
 
-              <div className="text-white mb-2">Glove Foundation</div>
+              <div className="mb-2">Glove Foundation</div>
               <div className="overScroll">
                 <div className="flex justify-between">
                   <div>Option</div>
@@ -159,19 +159,13 @@ function RightPanel(props) {
                   'Call to action'}
 
                 {props.stage === 3 && windowWidth && accordionOpen && 'Primary'}
-                {props.stage === 2 &&
-                  windowWidth &&
-                  !accordionOpen &&
-                  'Call to action'}
-                {props.stage === 2 && windowWidth && accordionOpen && 'Primary'}
-                {props.stage === 2 &&
-                  !windowWidth &&
-                  !accordionOpen &&
-                  'Call to action'}
-                {props.stage === 2 &&
-                  !windowWidth &&
-                  accordionOpen &&
-                  'Call to action'}
+                {props.stage === 2 && windowWidth &&  !accordionOpen && 'Call to action'}
+                {props.stage === 2 && windowWidth && accordionOpen && 'Call to action'}
+                {props.stage === 2 && !windowWidth && !accordionOpen && 'Call to action'}
+                {props.stage === 3 && !windowWidth && !accordionOpen && 'Call to action'}
+                {props.stage === 3 && !windowWidth && accordionOpen && 'Call to action'}
+                {props.stage === 3 && windowWidth && isMizedOpen && 'Primary'}
+                {props.stage === 2 && !windowWidth &&  accordionOpen && 'Call to action'}
               </p>
               <span>&rarr;</span>
             </button>

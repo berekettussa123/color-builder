@@ -37,6 +37,7 @@
   background-color: #D9D9D9;
   
 }
+
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,6 +45,7 @@
   top: 61px;
   z-index: 5;
   .hero-container-inner {
+   
     background-color: var(--bg);
     min-height: 21.25rem;
     display: flex;
@@ -66,6 +68,7 @@
   }
   .hero-container{
     z-index: 900 !important;
+
 
     .gradient {
       z-index: 599999!important;

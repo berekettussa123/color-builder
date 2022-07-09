@@ -80,7 +80,7 @@ function LeftPanel(props) {
           ]}
           onSelection={(option) => setOptions('colorOption', option)}
         />
-       <div
+      {!windowWidth && <div
           className="buttonLine"
           style={{
             width: '400px',
@@ -89,8 +89,8 @@ function LeftPanel(props) {
             position: 'relative',
             backgroundColor: 'black',
           }}
-        ></div>
-        <button className="inlineButton" 
+        ></div>}
+       {!windowWidth && <button className="inlineButton" 
         // onClick={handlebutton}
         >
             <div>Primary</div> 
@@ -111,7 +111,7 @@ function LeftPanel(props) {
               </svg>
             </div>
           </button>
-
+}
       </OptionAccordion>
       </>
       }
