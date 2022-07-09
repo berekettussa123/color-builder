@@ -17,14 +17,14 @@ function UpAccordion (props) {
     setStage(props.stage&&props.stage)
   }, [props.stage])
 
-  console.log("000000000000" +accordionOpen);
+  console.log("000000000000------" +props.stage);
 
 
   return (
     <>
     
     {stage === 3 ?
-      (<div className={` ${open ? ' openAccordion' : ''} up-accordion `}>
+      (<div className={` ${open ? ' openAccordion' : ''} up-accordion`}>
       <button
       
         className="w-full"
@@ -60,7 +60,7 @@ function UpAccordion (props) {
           {props.children}
         </div>
       </div>
-    </div>):(<div className={` ${open ? ' openAccordion' : ''} up-accordion ${accordionOpen ? " acccccord":""}`}>
+    </div>):(<div className={` ${open ? ' openAccordion' : ''} up-accordion  ${props.stage===2?" thirdMobileAccordion":''} ${accordionOpen ? " acccccord":""}`}>
       <button
         className="w-full"
         style={{zIndex:'22222'}}

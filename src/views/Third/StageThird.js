@@ -37,7 +37,7 @@ function StageSecond(){
 
             
         </nav> */}
-      <MainContainer stage={"three"} leftPanel={ <LeftPanel stage={"three"} />} rightPanel={ <RightPanel stage={3} />}>
+      <MainContainer stage={"three"} leftPanel={ !windowWidth && < LeftPanel stage={"three"} />} rightPanel={ <RightPanel stage={3} />}>
        {!windowWidth && <MiddleContainer stage={"three"}  />}
       </MainContainer>
       

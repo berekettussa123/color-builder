@@ -3,8 +3,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { IsopenContext } from '../../../context/isopenContext';
 import UpAccordion from '../../components/ui/UpAccordion';
+import LeftPanel from '../stage3/LeftPanel';
 import MiddleContainer from '../ui/MiddleContainer';
-import LeftPanel from './LeftPanel';
+
 
 function RightPanel(props) {
   const { isMizedOpen, dispatch } = useContext(IsopenContext);
@@ -15,13 +16,13 @@ function RightPanel(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
 
-  console.log('---------------' + isMizedOpen);
+  console.log('-------:::::::::::--------' + props.stage);
   return (
     <>
       {
         <div>
           
-          { (windowWidth && props.stage==="three") && <LeftPanel/>}
+         
           <div
             className={`${
               props.stage === 3 ? 'stagethreeacc flex-col justify-end pb-4' : ''
@@ -29,8 +30,9 @@ function RightPanel(props) {
               allMaximize ? ' minimizeMenu': ''
             } ${isMizedOpen ? ' hideMixed' : ''}`}
           >
-            
+             { (windowWidth && props.stage===3) && <LeftPanel/>}
             <UpAccordion stage={2}>
+
               {/* <div>Accourdion Up</div> */}
 
               <div className="text-white mb-2">Glove Foundation</div>

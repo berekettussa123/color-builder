@@ -192,8 +192,18 @@ p {
     margin-top: 4rem;
   }
 }
-
+@media (min-width: 920px) {
+.stagethreemobile{
+  margin-top: 5rem;
+  position: absolute;
+}}
 @media (max-width: 920px) {
+  
+  .stagethrees{
+    position: fixed !important;
+    
+    width:100vw;
+  }
  .cta{
   padding: 0;
   align-items: center;
@@ -213,6 +223,7 @@ p {
   }
   .navigation-instructions{
     font-size: 14px !important;
+    align-self: flex-start;
   }
   .buttonLine{
     // display: none !important;
