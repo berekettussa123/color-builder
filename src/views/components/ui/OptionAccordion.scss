@@ -38,7 +38,7 @@
     overflow: hidden;
     max-height: 0vh;
     .accordion-body-content{
-      width: 100vw;
+      // width: 100vw;
     }
     transition: max-height 0.3s ease-in;
     &.active {
@@ -51,10 +51,17 @@
 }
 
 @media (max-width: 920px) {
+  .option-accordion{
+    .accordion-body {
+      .accordion-body-content{
+        width: 100vw;
+      }}
+  }
   // .mobileAccordion{
   //   position: absolute;
   //   left: 0;
   // }
+  
   .hideMixedAcc{
     display: none;
   }
