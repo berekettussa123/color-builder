@@ -41,9 +41,9 @@ function Hero(props) {
             </div>
           </div>
         </header>
-        <Filters filters={['Filter 1', 'Filter 2', 'Filter 3', 'Filter 4']} />
       {/* <div className="gradient"></div> */}
       </div>
+        <Filters filters={['Filter 1', 'Filter 2', 'Filter 3', 'Filter 4']} />
     </div>
   );
 }
