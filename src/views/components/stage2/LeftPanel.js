@@ -212,8 +212,8 @@ function LeftPanel(props) {
               backgroundColor: 'black',
             }}
           ></div>
-          <div className="buttonAndIcon">
-            <button className="inlineButton" onClick={handlebutton}>
+          <div style={{backgroundColor:'black'}} className="buttonAndIcon">
+            <button  className="inlineButton" onClick={handlebutton}>
               <div>Secondary</div>
               <div className="iconButt">
                 <svg
@@ -234,6 +234,7 @@ function LeftPanel(props) {
             </button>
             {windowWidth && (
               <button
+              
                 className="inlineButton primaryButton"
                 // onClick={handlebutton}
               >
@@ -286,7 +287,7 @@ function LeftPanel(props) {
               backgroundColor: 'black',
             }}
           ></div>
-          <div className="buttonAndIcon">
+          <div style={{backgroundColor:'black'}} className="buttonAndIcon">
             <button className="inlineButton" onClick={handlebutton}>
               <div>Secondary</div>
               <div className="iconButt">
