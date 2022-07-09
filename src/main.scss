@@ -202,12 +202,23 @@ p {
     width: 100vw;
   }
   .cta {
-    padding: 0;
+    // padding: 0;
     align-items: center;
-    font-size: 16px !important;
+    // font-size: 16px !important;
     justify-content: space-between;
-    padding: 0px 5px;
+    // padding: 0px 5px;
     font-weight: normal;
+
+    // width: 100%;
+  border: none;
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 0.8125rem 1.25rem;
+  color: white;
+  background-color: var(--button-pc);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   }
   .navigation-dots {
     display: none;
