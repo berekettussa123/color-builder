@@ -60,6 +60,9 @@
 
 
 @media (max-width: 920px) {
+  .elements{
+    width: 100vw;
+  }
   .hero-container{
     z-index: 900 !important;
 
@@ -107,7 +110,8 @@
 
   .hero-container {
     height: 100px !important ;
-    margin-top: -145px;
+    width: 100vw;
+    // margin-top: -145px;
     // position: relative !important;
     margin-bottom: 320px;
     
