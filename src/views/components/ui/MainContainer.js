@@ -19,7 +19,7 @@ function MainContainer(props) {
       <main className={`${accordionOpen ? "hideLeftPanel " : ""} ${(props.stage==="two")||(props.stage==="three") ? " centerSecond" : ''} center-panel  px-5`}>
         { props.children }
       </main>
-      {!isMizedOpen && <div className="right-panel  px-5">
+      {((!isMizedOpen && !windowWidth) || (!isMizedOpen && windowWidth)||(isMizedOpen && !windowWidth)) && <div className="right-panel  px-5">
         { props.rightPanel }
       </div>}
     </div>
