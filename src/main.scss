@@ -56,10 +56,9 @@
   transition: fill 0.1s ease-in;
   transition: background-color 0.1s ease-in;
 }
-.select-container{
-
+.select-container {
 }
-.inlineButton{
+.inlineButton {
   font-size: 18px;
   background-color: #222222;
   margin-top: 0px;
@@ -72,22 +71,20 @@
   align-items: center;
   width: 100%;
   height: 56px;
-  
-
 }
-.iconButt{
+.iconButt {
   display: flex;
 }
-.primaryButton{
+.primaryButton {
   display: flex;
   justify-content: space-between;
   color: black;
-  background-color: #FFFF;
+  background-color: #ffff;
 }
-.inlineButton:hover{
+.inlineButton:hover {
   background-color: 222222;
 }
-.buttonAndIcon{
+.buttonAndIcon {
   color: white;
   width: 100%;
   display: flex;
@@ -116,7 +113,7 @@ code {
 }
 
 .cta-container {
-  padding: 0rem 0.0rem 0rem 0.3rem !important;
+  padding: 0rem 0rem 0rem 0.3rem !important;
   background-color: #d9d9d9;
   // position: fixed !important;
   // top: 100px !important;
@@ -171,61 +168,61 @@ h4,
 p {
   margin: 0;
 }
+
 @media (min-width: 920px) {
- 
-  .marginCenterNO{
+  .marginCenterNO {
     margin-top: 0rem !important;
   }
-  .marginCenterYES{
+  .marginCenterYES {
     margin-top: 4rem;
   }
-  .leftContainers{
+  .leftContainers {
     margin-top: 5rem;
   }
-  .stagethreeacc{
+  .stagethreeacc {
     background-color: white;
   }
-  .accordionCTA{
+  .accordionCTA {
     display: flex;
   }
-  .accordionAndCTA{
+  .accordionAndCTA {
     margin-top: 4rem;
   }
 }
 @media (min-width: 920px) {
-.stagethreemobile{
-  margin-top: 5rem;
-  position: absolute;
-}}
+  .stagethreemobile {
+    margin-top: 5rem;
+    position: absolute;
+  }
+}
 @media (max-width: 920px) {
-  
-  .stagethrees{
+  .stagethrees {
     position: fixed !important;
-    
-    width:100vw;
+
+    width: 100vw;
   }
- .cta{
-  padding: 0;
-  align-items: center;
-  font-size: 16px !important;
-  justify-content: space-between;
-  padding: 0px 5px;
-  font-weight: normal;
- }
- .navigation-dots{
-  display: none;
- }
-  .hideLeftPanel{
+  .cta {
+    padding: 0;
+    align-items: center;
+    font-size: 16px !important;
+    justify-content: space-between;
+    padding: 0px 5px;
+    font-weight: normal;
+  }
+  .navigation-dots {
     display: none;
   }
-  .CenterClosedContext{
+  .hideLeftPanel {
     display: none;
   }
-  .navigation-instructions{
+  .CenterClosedContext {
+    display: none;
+  }
+  .navigation-instructions {
     font-size: 14px !important;
     align-self: flex-start;
   }
-  .buttonLine{
+  .buttonLine {
     // display: none !important;
   }
   .gradients {
@@ -236,27 +233,30 @@ p {
     bottom: 80px;
     height: 5rem;
     // background-color: aqua;
-    background: linear-gradient(360deg, rgba(22, 22, 22, 52) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+      360deg,
+      rgba(22, 22, 22, 52) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 
   .rightButtonCTA {
     // display: none;
   }
-  .iconsMinimize{
+  .iconsMinimize {
     transform: translateY(calc(100vh - 30vh));
 
-    transition: all 0.5s ;
-    
+    transition: all 0.5s;
   }
-  .minimizeMenu{
+  .minimizeMenu {
     transform: translateY(100px);
     transition: all 0.4s ease-out;
     display: none;
   }
   .leftContainers {
     height: 50vh;
-   width: 95%;
-    
+    width: 95%;
+
     z-index: 20000000000;
     // background-color: aqua;
     overflow-y: scroll !important;
@@ -264,18 +264,17 @@ p {
     bottom: 5rem;
     // z-index: 1111111111111 !important;
   }
-  .leftContaineropen{
+  .leftContaineropen {
     height: 50vh;
-   width: 95%;
-    
+    width: 95%;
+
     z-index: 20000000000;
     // background-color: aqua;
     overflow-y: scroll !important;
     position: fixed;
     bottom: 0;
-
   }
-  .minimizeAll{
+  .minimizeAll {
     transform: translateY(600px);
     transition: all 0.4s ease-in;
     opacity: 0;
@@ -292,16 +291,15 @@ p {
     // z-index: 999;
     // height: 30px;
   }
-  .centerStageTwo{
+  .centerStageTwo {
     // flex: 5;
   }
   .accordionAndCTA {
-    
     .rightButtonCTA {
       display: flex;
-
+      z-index: 1 !important;
       height: 56px;
-      background-color: #2997FF;
+      background-color: #2997ff;
       // flex-direction: row-reverse;
       margin-bottom: 20px;
       margin-right: 2rem;
@@ -309,12 +307,10 @@ p {
       align-self: flex-end;
       // height: 40px;
     }
-    
 
     // height: 30px;
   }
-  .cta-container{
-    margin: 0rem 0.0rem 0rem 0.3rem;
+  .cta-container {
+    margin: 0rem 0rem 0rem 0.3rem;
   }
-  
 }
