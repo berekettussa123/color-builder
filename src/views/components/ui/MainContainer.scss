@@ -92,7 +92,9 @@
   }
   .main-container {
     height: 100vh;
+    width: 100vw;
     // background-color: aqua !important;
+    overflow-x: clip;
     .center-panel {
       // flex: 1;
       // background-color: aliceblue;

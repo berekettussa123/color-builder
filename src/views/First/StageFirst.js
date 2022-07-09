@@ -28,26 +28,28 @@ function StageFirst() {
   };
 
   return (
-    <>
+    <div>
       <Nav />
-      <MainContainer>
-        <Hero handleOpen={showBuildModal} />
-        <section className="elements">
-          <div className="elements-container">
-            {[0, 1, 2, 3, 4, 5, 7, 8, 9].map((i) => (
-              <Card handleOpen={showModal} />
-            ))}
-          </div>
-        </section>
-      </MainContainer>
-      <Modal title="Modal Title" show={show} handleClose={hideModal} />
-      <BuildModal
-        stage="one"
-        title="Build Modal Title"
-        show={showBuild}
-        handleClose={hideBuildModal}
-      />
-    </>
+      <div>
+        <MainContainer>
+          <Hero handleOpen={showBuildModal} />
+          <section className="elements">
+            <div className="elements-container">
+              {[0, 1, 2, 3, 4, 5, 7, 8, 9].map((i) => (
+                <Card handleOpen={showModal} />
+              ))}
+            </div>
+          </section>
+        </MainContainer>
+        <Modal title="Modal Title" show={show} handleClose={hideModal} />
+        <BuildModal
+          stage="one"
+          title="Build Modal Title"
+          show={showBuild}
+          handleClose={hideBuildModal}
+        />
+      </div>
+    </div>
   );
 }
 
