@@ -41,7 +41,7 @@ function Filters(props) {
         }
       </div>
       <select
-      style={{backgroundColor:'black',color:'white'}}
+      style={{backgroundColor:'black',color:'red'}}
         className="filters-mobile"
         onChange={(e) => handleSelection(e.target.value)}
       >
