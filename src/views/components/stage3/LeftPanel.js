@@ -7,11 +7,12 @@ import SelectColor from '../../components/ui/SelectColor';
 import ColorCircle from '../../components/ui/ColorCircle';
 import { IsopenContext } from '../../../context/isopenContext';
 import MiddleContainer from '../ui/MiddleContainer';
+import { Link, NavLink } from 'react-router-dom';
 
 function LeftPanel(props) {
   const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
-    setWindowWidth(window.innerWidth && window.innerWidth <= 600);
+    setWindowWidth(window.innerWidth && window.innerWidth <= 900);
   }, []);
   const [state, setState] = useState({});
   const {accordionOpen,allMaximize } = useContext(IsopenContext);
@@ -113,7 +114,22 @@ function LeftPanel(props) {
           </button>
 }
       </OptionAccordion>
-      </>
+
+     {!windowWidth && 
+     <NavLink to={"/stage-two"}>
+
+     <button
+        className="w-full"
+        style={{position:'absolute',height:'56px',bottom:'3rem',left:'2rem',backgroundColor:'#222222',width:'180px'}}
+      >
+        <div style={{zIndex:'2222299999999999'}}   className="accordion-button h-14 py-3.5 px-6 flex items-center">
+          <div className={`arrow} flex items-center mr-2 grow-0`}>
+          <span>&larr;</span>
+          </div>
+            <h3 className="mobileAccordion grow text-left">Back To Design<span className="showExtenstion">Up</span></h3>
+          {/* <p className="grow-0">{props.selectedOption || "Option"}</p> */}
+        </div>
+      </button> </NavLink> }</>
       }
     </div>
   );
