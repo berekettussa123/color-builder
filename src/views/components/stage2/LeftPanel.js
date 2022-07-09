@@ -147,7 +147,8 @@ function LeftPanel(props) {
           ]}
         /> */}
         </OptionAccordion>
-        <OptionAccordion title="TextInput" selectedOption={state.textOption}>
+        <OptionAccordion
+         title="TextInput" selectedOption={state.textOption}>
           <SelectInput
             onSelection={(option) => setOptions('textOption', option)}
           />
@@ -165,7 +166,7 @@ function LeftPanel(props) {
             // onClick={handlebutton}
           >
             <div>Primary</div>
-            <div className="iconButt ininlineButtonPrimary">
+            <div className="iconButt ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
