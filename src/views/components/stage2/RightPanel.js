@@ -164,9 +164,11 @@ function RightPanel(props) {
               <p>
                 {props.stage === 3 &&
                   windowWidth &&
-                  !accordionOpen &&
+                  !accordionOpen && !isMizedOpen &&
                   'Call to action'}
-
+                   {props.stage === 3 &&
+                  windowWidth && !accordionOpen && isMizedOpen &&
+                  'Primary'}
                 {props.stage === 3 && windowWidth && accordionOpen && 'Primary'}
                 {props.stage === 2 && windowWidth &&  !accordionOpen && 'Call to action'}
                 {props.stage === 2 && windowWidth && accordionOpen && 'Call to action'}
