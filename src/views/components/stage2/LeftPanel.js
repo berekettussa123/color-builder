@@ -14,6 +14,8 @@ import { IsopenContext } from '../../../context/isopenContext';
 import ColorCircle2 from '../ui/ColorCircle2';
 import { useEffect } from 'react';
 import MiddleContainer from '../ui/MiddleContainer';
+import {CgArrowRight} from 'react-icons/cg'
+
 
 function LeftPanel(props) {
   const { singleOpened, dispatch } = useContext(IsopenContext);
@@ -153,7 +155,7 @@ function LeftPanel(props) {
           <SelectInput
             onSelection={(option) => setOptions('textOption', option)}
           />
-          <div
+          {windowWidth&&<div
             className="buttonLine"
             style={{
               width: '120%',
@@ -161,29 +163,16 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button
+          ></div>}
+          {windowWidth&&<button
             className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
-            <div className="iconButt ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+            <div  className="iconButt ">
+            < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         <OptionAccordion
           title="Color Option1"
@@ -214,23 +203,10 @@ function LeftPanel(props) {
             }}
           ></div>
           <div style={{backgroundColor:'black'}} className="buttonAndIcon">
-            <button  className="inlineButton" onClick={handlebutton}>
+            <button  className="inlineButton" onClick={handlebutton2}>
               <div>Secondary</div>
-              <div className="iconButt">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="img"
-                  width="14"
-                  height="14"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="white"
-                    d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                  />
-                </svg>
+              <div className="iconButtSecondary">
+              < CgArrowRight/>
               </div>
             </button>
             {windowWidth && (
@@ -241,20 +217,7 @@ function LeftPanel(props) {
               >
                 <div>Primary</div>
                 <div className="iconButt">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    role="img"
-                    width="14"
-                    height="14"
-                    preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="black"
-                      d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                    />
-                  </svg>
+                < CgArrowRight/>
                 </div>
               </button>
             )}
@@ -292,20 +255,7 @@ function LeftPanel(props) {
             <button className="inlineButton" onClick={handlebutton}>
               <div>Secondary</div>
               <div className="iconButt">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="img"
-                  width="14"
-                  height="14"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="white"
-                    d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                  />
-                </svg>
+              < CgArrowRight/>
               </div>
             </button>
             {windowWidth && (
@@ -315,20 +265,7 @@ function LeftPanel(props) {
               >
                 <div>Primary</div>
                 <div className="iconButt">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    role="img"
-                    width="14"
-                    height="14"
-                    preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="black"
-                      d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                    />
-                  </svg>
+                < CgArrowRight/>
                 </div>
               </button>
             )}
@@ -380,7 +317,7 @@ function LeftPanel(props) {
             ]}
             onSelection={(option) => setOptions('dualColorOption2', option)}
           />
-          <div
+          {windowWidth && <div
             className="buttonLine"
             style={{
               width: '120%',
@@ -388,26 +325,13 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
+          ></div>}
+          {windowWidth&&<button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
             <div>Primary</div>
             <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+              < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         <OptionAccordion
           title="2 Options"
@@ -426,7 +350,7 @@ function LeftPanel(props) {
             ]}
             onSelection={async (option) => setOptions('firstOption', option)}
           />
-          <div
+          {windowWidth&&<div
             className="buttonLine"
             style={{
               width: '120%',
@@ -434,26 +358,13 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
+          ></div>}
+         {windowWidth && <button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
             <div>Primary</div>
             <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+            < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         <OptionAccordion
           title="Title"
@@ -476,7 +387,7 @@ function LeftPanel(props) {
             ]}
             onSelection={(option) => setOptions('secondOption', option)}
           />
-          <div
+         {windowWidth&& <div
             className="buttonLine"
             style={{
               width: '120%',
@@ -484,29 +395,16 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button
+          ></div>}
+          {windowWidth && <button
             className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
             <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+            < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         <OptionAccordion
           title="Title"
@@ -533,7 +431,7 @@ function LeftPanel(props) {
             ]}
             onSelection={(option) => setOptions('thirdOption', option)}
           />
-          <div
+         {windowWidth && <div
             className="buttonLine"
             style={{
               width: '120%',
@@ -541,29 +439,16 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button
+          ></div>}
+          {windowWidth&&<button
             className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Secondary</div>
             <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+            < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         <OptionAccordion
           title="Title"
@@ -583,7 +468,7 @@ function LeftPanel(props) {
             ]}
             onSelection={(option) => setOptions('fourthOption', option)}
           />
-          <div
+          {windowWidth&&<div
             className="buttonLine"
             style={{
               width: '120%',
@@ -591,29 +476,16 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button
+          ></div>}
+          {windowWidth&&<button
             className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
             <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+            < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         <OptionAccordion
           title="Title"
@@ -649,7 +521,7 @@ function LeftPanel(props) {
             ]}
             onSelection={(option) => setOptions('sixthOption', option)}
           />
-          <div
+          {windowWidth&&<div
             className="buttonLine"
             style={{
               width: '120%',
@@ -657,29 +529,16 @@ function LeftPanel(props) {
               height: '10px',
               backgroundColor: 'black',
             }}
-          ></div>
-          <button
+          ></div>}
+         {windowWidth&& <button
             className="inlineButton ininlineButtonPrimary"
             // onClick={handlebutton}
           >
             <div>Primary</div>
             <div className="iconButt">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="14"
-                height="14"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
-                />
-              </svg>
+            < CgArrowRight/>
             </div>
-          </button>
+          </button>}
         </OptionAccordion>
         </div>        {/* <div style={{ height: '1.2rem' }}></div>
       <div className="gradients"></div> */}

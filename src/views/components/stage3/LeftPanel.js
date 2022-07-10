@@ -81,7 +81,7 @@ function LeftPanel(props) {
           ]}
           onSelection={(option) => setOptions('colorOption', option)}
         />
-      {!windowWidth && <div
+      {/* {!windowWidth && <div
           className="buttonLine"
           style={{
             width: '400px',
@@ -112,7 +112,7 @@ function LeftPanel(props) {
               </svg>
             </div>
           </button>
-}
+} */}
       </OptionAccordion>
 
      {!windowWidth && 
