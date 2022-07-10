@@ -20,6 +20,7 @@ function LeftPanel(props) {
   const [state, setState] = useState({});
   const [show, setShow] = useState(false);
   const [showBuild, setShowBuild] = useState(false);
+  
   const [both, setBoth] = useState(
     state.colorOption && state.colorOption.value
   );
@@ -97,7 +98,7 @@ function LeftPanel(props) {
   return (
     <>
       <div
-        className={`${isMizedOpen ? ' LeftContainerOpen ' : 'leftContainers'}`}
+        className={`${allMaximize?"hideLeft":''} ${isMizedOpen ? ' LeftContainerOpen ' : 'leftContainers'}`}
       >
        {(!isMizedOpen && windowWidth) && <div style={{position:'fixed',zIndex:'11111111111', marginBottom:'2rem !important'}}>
           <MiddleContainer />

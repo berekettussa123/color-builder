@@ -267,19 +267,24 @@ p {
   //     rgba(0, 0, 0, 0) 100%
   //   );
   // }
-
+.hideLeft{
+  height: 0 !important;
+  transition: all 0.3s ease;
+}
   .rightButtonCTA {
     // display: none;
   }
   .iconsMinimize {
-    transform: translateY(calc(100vh - 30vh));
+    // transform: translateY(calc(100vh - 30vh));
+    position: fixed;
+    bottom: 50px;
 
-    transition: all 0.5s;
+    // transition: all 0.5s;
   }
   .minimizeMenu {
     transform: translateY(100px);
     transition: all 0.4s ease-out;
-    display: none;
+    // display: none;
   }
   .leftContainers {
     height: 50vh;
