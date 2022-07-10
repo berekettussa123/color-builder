@@ -31,7 +31,7 @@ function StageFirst() {
     <div>
       <Nav />
       <MainContainer>
-        <div style={{width:'100%',display:'flex',flexDirection:'column'}}>
+        <div style={{width:'100%',display:'flex',flexDirection:'column',alignItems:'flex-start'}}>
           <Hero handleOpen={showBuildModal} />
           <section className="elements">
             <div className="elements-container">

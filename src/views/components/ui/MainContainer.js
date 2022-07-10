@@ -16,7 +16,7 @@ function MainContainer(props) {
       <div className={`${accordionOpen ? "hideLeftPanel " : ''} left-panel  px-5 overflow-y-auto`}>
         { props.leftPanel }
       </div>
-      <main className={`${accordionOpen ? "hideLeftPanel " : ""} ${(props.stage==="two")||(props.stage==="three") ? " centerSecond" : ''} center-panel  px-0`}>
+      <main className={`${accordionOpen ? "hideLeftPanel " : ""} ${(props.stage==="two")||(props.stage==="three") ? " centerSecond" : ''} center-panel  px-5`}>
         { props.children }
       </main>
       {((!isMizedOpen && !windowWidth) || (!isMizedOpen && windowWidth)||(isMizedOpen && !windowWidth)) && <div className="right-panel  px-5">

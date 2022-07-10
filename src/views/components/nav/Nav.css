@@ -1,5 +1,5 @@
 nav {
-  /* width: 100vw !important; */
+  
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -49,6 +49,9 @@ nav h1 {
 }
 
 @media (min-width: 900px) {
+  nav{
+    width: 100vw !important;
+  }
   .stages-container .not-active {
     display: initial;
   }
