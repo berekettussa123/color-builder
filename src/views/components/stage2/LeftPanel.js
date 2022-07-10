@@ -102,7 +102,7 @@ function LeftPanel(props) {
        {(!isMizedOpen && windowWidth) && <div style={{position:'fixed',zIndex:'11111111111', marginBottom:'2rem !important'}}>
           <MiddleContainer />
         </div>}
-        <div  className={`${isMizedOpen ? "marginCenterNO" :'marginCenterYES'}`} style={{marginTop:'0rem'}}>
+        <div  className={`${isMizedOpen ? "marginCenterNO" :'marginCenterYES'}`} style={{marginTop:'4rem'}}>
         {/* <div className="gradients"></div> */}
         <OptionAccordion
           stage="two"
@@ -112,7 +112,7 @@ function LeftPanel(props) {
           selectedOption={state.imageOption && state.imageOption.value}
         >
           <BuildModal
-            title="Build Modal Me"
+            title="Build Modal"
             stage="two"
             show={showBuild}
             handleClose={hideBuildModal}

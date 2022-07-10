@@ -5,6 +5,7 @@ import MiddleContainer from './MiddleContainer';
 
 function OptionAccordion(props) {
   const [open, setOpen] = useState(false);
+  const [buildOpen, setBuildOpen] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
   const { singleOpened, arrowUp,accordionOpen } = useContext(IsopenContext);
   
@@ -17,6 +18,12 @@ function OptionAccordion(props) {
   const handleClick = () => {
      dispatch({ type: 'MIXEDOPENSHOW' });
   };
+  const handleBuild = () => {
+
+     setBuildOpen(!buildOpen)
+     setOpen(!open);
+    };
+    console.log("*************build" + buildOpen);
   // const isOpenedClicked = () => {
   //   // setIsOpened(!isOpened);
   //   // console.log('7777777777777  ' + isOpened);
@@ -25,7 +32,6 @@ function OptionAccordion(props) {
     setOpen(!open);
     // dispatch({ type: 'ARROWUP' });
     // dispatch({ type: 'SINGLEOPENED' })
-    console.log(open);
     props.showBuildModal();
     // console.log("cont: : : " +singleOpened)
   };
@@ -101,12 +107,13 @@ function OptionAccordion(props) {
         </div>
       </div>
       )}
-    </div>) :(<div
+    </div>) :
+    (<div
       // onClick={isOpenedClicked}
       
       className={`option-accordion${open ? ' open' : ''} ${isMizedOpen && " FirstClosed"}`}
     >
-      <button className="w-full" onClick={openButton}>
+      <button className="w-full" onClick={!props.title === 'Build' ? openButton : handleBuild }>
         {(isMizedOpen && windowWidth) &&<MiddleContainer/>}
         <div
           onClick={handleClick}
@@ -141,6 +148,7 @@ function OptionAccordion(props) {
       </button>
       {props.title === 'Build' && (
         <div
+        onClick={handleBuild}
           // id={`test ${open ? 'test' : ''}`}
           className={`accordion-body ${
             open ? ' active' : `${isOpened ? ' colorno' : ''}`
