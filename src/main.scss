@@ -277,7 +277,8 @@ p {
   .iconsMinimize {
     // transform: translateY(calc(100vh - 30vh));
     position: fixed;
-    bottom: 50px;
+    bottom: 10px;
+    left: 10px;
     z-index: 10000000 !important;
 
     // transition: all 0.5s;
