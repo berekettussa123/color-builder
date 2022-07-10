@@ -276,10 +276,8 @@ p {
   }
   .iconsMinimize {
     // transform: translateY(calc(100vh - 30vh));
-    position: fixed;
-    bottom: 50px;
-    background-color: red !important;
-    color: white !important;
+    // position: absolute;
+    // bottom: 0;
 
     // transition: all 0.5s;
   }
