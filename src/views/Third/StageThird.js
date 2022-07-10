@@ -11,6 +11,7 @@ import { IsopenContext } from "../../context/isopenContext";
 function StageSecond(){
   const {accordionOpen } = useContext(IsopenContext);
   const [windowWidth, setWindowWidth] = useState();
+  const {allMaximize} = useContext(IsopenContext)
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
@@ -40,6 +41,7 @@ function StageSecond(){
       <MainContainer stage={"three"} leftPanel={ !windowWidth && < LeftPanel stage={"three"} />} rightPanel={ <RightPanel stage={3} />}>
        {!windowWidth && <MiddleContainer stage={"three"}  />}
       </MainContainer>
+      {(allMaximize&&windowWidth)&&<MiddleContainer/>}
       
     </>
   );
