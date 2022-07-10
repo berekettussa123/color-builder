@@ -96,10 +96,11 @@
 }
 @media (max-width: 920px) {
   .BuildModalShow{
+    transform: scale(0.9);
     position: fixed !important;
-    // top: 200px !important;
     z-index: 59111111111111111111111111111199992;
     
   }
+  
 }
 

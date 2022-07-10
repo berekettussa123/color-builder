@@ -83,10 +83,10 @@
     }
     .button-container{
 
-
-      padding-right: 22px;
-      padding-top: 10px;
-      padding-bottom: 15px;
+padding: 10px ;
+      // padding-right: 22px;
+      // padding-top: 10px;
+      // padding-bottom: 15px;
     }
       .fixed_navbar {
         z-index: 90000;
@@ -96,12 +96,15 @@
         top: 60px !important;
         left: 100 !important;
         right: 100 !important;
+        
       }
       .fixed_navbar{
-        .cta{
-          width: 95%;
-          z-index: 89999999999999999 !important;
-        }
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+       
       }
  
   .stickyMenu {

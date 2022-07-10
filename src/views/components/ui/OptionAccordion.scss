@@ -42,9 +42,8 @@
     }
     transition: max-height 0.3s ease-in;
     &.active {
-      max-height: 90vh;
-      // position: fixed;
-      // top: 0;
+      max-height: 100vh;
+      
     }
     &.colorno {
       background-color: yellow;

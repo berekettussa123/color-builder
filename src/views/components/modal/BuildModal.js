@@ -8,7 +8,7 @@ function BuildModal(props) {
   console.log(props.stage==="two");
   const {allMaximize,arrowUp,dispatch} = useContext(IsopenContext)
   return (
-    <div className={`${(props.stage === "two") ? "build-modal-two": " build-modal"} ${props.show ? "BuildModalShow" : " display-none"}`}>
+    <div className={`${(props.stage === "two") ? "build-modal-two ": " build-modal"} ${props.show ? "BuildModalShow" : " display-none"}`}>
       <div className={`build-modal-content${props.show ? " animate-bottom" : ""}`}>
         <div className="build-modal-header">
           <h2>{props.title}</h2>
@@ -19,7 +19,8 @@ function BuildModal(props) {
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L21 21M21 1L11 11L1 21" stroke="white" stroke-width="2"/>
             </svg>
-          </button>):!props.stage==="one" && <button
+          </button>):
+          !props.stage==="one" && <button
             className="close-button"
             onClick={props.handleClose}
           >
