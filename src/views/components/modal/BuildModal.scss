@@ -3,7 +3,6 @@
     // z-index: 999999444444!important;
     // color: aqua !important ;
     position: absolute !important;
-    
   }
  
 }
@@ -98,6 +97,7 @@
 @media (max-width: 920px) {
   .BuildModalShow{
     position: fixed !important;
+    // top: 200px !important;
     z-index: 59111111111111111111111111111199992;
     
   }
