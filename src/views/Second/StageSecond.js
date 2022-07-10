@@ -20,7 +20,7 @@ function StageSecond() {
   return (
     <>
       <Nav />
-      <MainContainer stage={"two"} leftPanel={<LeftPanel stage={"two"}/>} rightPanel={<RightPanel stage={2} />}>
+      <MainContainer stage={"two"} leftPanel={<LeftPanel stage={"two"}/>} rightPanel={(!allMaximize || !windowWidth)&& <RightPanel stage={2} />}>
         {((!isMizedOpen&& !windowWidth)||(isMizedOpen&&!windowWidth )||(windowWidth&&!isMizedOpen))&&<MiddleContainer stage={"two"}/>}
       </MainContainer>
       {(allMaximize&&windowWidth)&&<MiddleContainer/>}
