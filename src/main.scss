@@ -128,8 +128,10 @@ code {
 }
 
 .cta-container {
-  padding: 0rem 0rem 0rem 0.3rem !important;
+  // padding: 0rem 0rem 0rem 0.3rem !important;
+  padding: 5px;
   background-color: #d9d9d9;
+  
   // position: fixed !important;
   // top: 100px !important;
 }
