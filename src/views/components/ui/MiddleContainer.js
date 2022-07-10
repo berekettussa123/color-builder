@@ -5,7 +5,7 @@ import "./MiddleContainer.scss";
 function MiddleContainer(props) {
   const {accordionOpen } = useContext(IsopenContext);
   const {allMaximize,dispatch} = useContext(IsopenContext)
-  console.log("i am middle -------- "+allMaximize);
+  console.log("i am middle -------- ");
 
   const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
@@ -13,10 +13,10 @@ function MiddleContainer(props) {
   }, []);
 // console.log("this is   "+allMaximize);
   return (
-    <div style={{zIndex:'900000000'}} className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 `}>
-      <div style={{zIndex:'900000000'}} className="middle-container-content flex-1 w-full">
+    <div className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 ${allMaximize && " iconsMinimize"}`}>
+      <div className="middle-container-content flex-1 w-full">
       </div>
-      <div style={{zIndex:'90000000000'}} className={`${allMaximize && "iconsMinimize"} ${props.stage==="two" && "stageTwoCenter"}  ${props.stage===3 ? " stageThreeCenter " : ''} middle-container-menu flex flex-col justify-center items-center`}>
+      <div className={` ${props.stage==="two" && "stageTwoCenter"}  ${props.stage===3 ? " stageThreeCenter " : ''} middle-container-menu flex flex-col justify-center items-center`}>
         <div className="navigation-dots flex my-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
