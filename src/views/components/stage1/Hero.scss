@@ -41,6 +41,7 @@
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
+
   // position: sticky;
   top: 61px;
   z-index: 5;
@@ -69,7 +70,7 @@
   }
   .hero-container{
     z-index: 900 !important;
-
+    padding: 0px 10px;
 
     // .gradient {
     //   z-index: 599999!important;
@@ -83,7 +84,7 @@
     }
     .button-container{
 
-padding: 10px ;
+padding: 10px 20px 10px 15px ;
       // padding-right: 22px;
       // padding-top: 10px;
       // padding-bottom: 15px;
