@@ -69,7 +69,8 @@
 
     z-index: 5911111111111111111111111111119999 !important;
     width: 100vw;
-    height: 5rem;
+    height: 3rem;
+    left: 0;
     // background-color: aqua;
     background: linear-gradient(
       360deg,
@@ -81,6 +82,7 @@
     position: absolute;
     top: 66px;
     // bottom: 0px;
+    left: 0;
 
     z-index: -90 !important;
     width: 100vw;
