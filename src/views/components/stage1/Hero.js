@@ -34,8 +34,8 @@ function Hero(props) {
               </p>
             </div>
             <div className="button-container" id="Navigation">
-              <div className="cta-container cta-hero">
-                <button className="cta " onClick={props.handleOpen}>
+              <div style={{position:'relative'}} className="cta-container cta-hero">
+                <button  className="cta " onClick={props.handleOpen}>
                   <div>
                     <p className="">Call To Action</p>{' '}
                   </div>
@@ -43,12 +43,13 @@ function Hero(props) {
                     <span>&rarr;</span>
                   </div>
                 </button>
+                <div className="gradientsTop"></div>
               </div>
             </div>
           </header>
-          {/* <div className="gradient"></div> */}
           <Filters filters={['Filter 1', 'Filter 2', 'Filter 3', 'Filter 4']} />
-        </div>
+          </div>
+          <div className="gradients"></div>
         </div>
     </div>
   );
