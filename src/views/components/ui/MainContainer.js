@@ -15,7 +15,7 @@ function MainContainer(props) {
       <div
         className={`${
           accordionOpen ? 'hideLeftPanel ' : ''
-        } ${props.stage==="one" ? "left-panel" :" left-panel2 "}   px-5 overflow-y-auto`}
+        } ${props.stage==="one" ? "left-panel" :"left-panel left-panel2 "}   px-5 overflow-y-auto`}
       >
         {props.leftPanel}
       </div>
