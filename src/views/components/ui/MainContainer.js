@@ -1,27 +1,38 @@
-import { useContext, useEffect, useState } from "react";
-import { IsopenContext } from "../../../context/isopenContext";
-import "./MainContainer.scss";
+import { useContext, useEffect, useState } from 'react';
+import { IsopenContext } from '../../../context/isopenContext';
+import './MainContainer.scss';
 
 function MainContainer(props) {
-  const {accordionOpen } = useContext(IsopenContext);
-  const { isMizedOpen,dispatch } = useContext(IsopenContext);
+  const { accordionOpen } = useContext(IsopenContext);
+  const { isMizedOpen, dispatch } = useContext(IsopenContext);
   const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
-  console.log("------|||--------" + props.stage);
+  console.log('------|||--------' + props.stage);
   return (
     <div className="main-container flex">
-
-      <div className={`${accordionOpen ? "hideLeftPanel " : ''} left-panel  px-5 overflow-y-auto`}>
-        { props.leftPanel }
+      <div
+        className={`${
+          accordionOpen ? 'hideLeftPanel ' : ''
+        } ${props.stage==="one" ? "left-panel" :" left-panel2 "}   px-5 overflow-y-auto`}
+      >
+        {props.leftPanel}
       </div>
-      <main className={`${accordionOpen ? "hideLeftPanel " : ""} ${(props.stage==="two")||(props.stage==="three") ? " centerSecond" : ''} center-panel  px-0`}>
-        { props.children }
+      <main
+        className={`${accordionOpen ? 'hideLeftPanel ' : ''} ${
+          props.stage === 'two' || props.stage === 'three'
+            ? ' centerSecond'
+            : ''
+        } ${props.stage==="one" ? "center-panel " :" center-panel center-panel2 "}`}
+      >
+        {props.children}
       </main>
-      {((!isMizedOpen && !windowWidth) || (!isMizedOpen && windowWidth)||(isMizedOpen && !windowWidth)) && <div className="right-panel  px-5">
-        { props.rightPanel }
-      </div>}
+      {((!isMizedOpen && !windowWidth) ||
+        (!isMizedOpen && windowWidth) ||
+        (isMizedOpen && !windowWidth)) && (
+        <div className={`${props.stage==="one" ? " right-panel " :" right-panel2 "}  px-5`}>{props.rightPanel}</div>
+      )}
     </div>
   );
 }

@@ -25,8 +25,8 @@ function Filters(props) {
 
 
   return (
-    <div className="filters-container">
-      <div className="filters-desktop flex my-4">
+    <div  className="filters-container">
+      <div className="filters-desktop flex pt-2">
         {
           props.filters.map((filter, index) => {
             return (

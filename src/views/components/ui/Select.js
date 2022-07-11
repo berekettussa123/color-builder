@@ -36,7 +36,7 @@ function Select (props) {
   }
 
   return (
-    <div className="select-container pb-2">
+    <div className="select-container pb-4">
       { props.subtitle ? <h3 className="subtitle mb-2">{props.subtitle}</h3> : null }
       <div className={`grid grid-cols-${gridLength(props.options.length)} gap-2.5`}>
         {props.options.map((option) => (
