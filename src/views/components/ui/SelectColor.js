@@ -22,7 +22,7 @@ function SelectColor (props) {
   return (
     <div className="select-container mb-4">
       { props.subtitle ? <h3 className="subtitle mb-2">{props.subtitle}</h3> : null }
-      <div className={`grid grid-cols-7 gap-2.5`}>
+      <div style={{display:'flex',flexWrap:'wrap',gap:'8px'}}>
         {props.colors.map((color) => (
           <>
             <button

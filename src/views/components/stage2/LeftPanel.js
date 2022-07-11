@@ -196,7 +196,7 @@ function LeftPanel(props) {
           <div
             className="buttonLine"
             style={{
-              width: '120%',
+              width: '100vw',
               marginLeft: '-28px',
               height: '10px',
               backgroundColor: 'black',
@@ -245,7 +245,7 @@ function LeftPanel(props) {
           <div
             className="buttonLine"
             style={{
-              width: '120%',
+              width: '100vw',
               marginLeft: '-28px',
               height: '10px',
               backgroundColor: 'black',
@@ -434,7 +434,7 @@ function LeftPanel(props) {
          {windowWidth && <div
             className="buttonLine"
             style={{
-              width: '120%',
+              width: '100vw',
               marginLeft: '-28px',
               height: '10px',
               backgroundColor: 'black',
