@@ -20,7 +20,7 @@ function Hero(props) {
   });
 
   return (
-    <div>
+    <div >
       <div className="hero-container">
         <div className={`hero-container-inner${scroll ? ' scrolled' : ''}`}>
           <header className="page-header">
