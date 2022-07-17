@@ -340,11 +340,11 @@ function LeftPanel(props) {
           <Select
             options={[
               {
-                text: 'Option1',
+                text: 'Option',
                 value: 1,
               },
               {
-                text: 'Option2',
+                text: 'Option',
                 value: 2,
               },
             ]}
@@ -373,15 +373,15 @@ function LeftPanel(props) {
           <Select
             options={[
               {
-                text: 'Option 1',
+                text: 'Option',
                 value: 1,
               },
               {
-                text: 'Option 2',
+                text: 'Option',
                 value: 2,
               },
               {
-                text: 'Option 3',
+                text: 'Option',
                 value: 3,
               },
             ]}
@@ -413,19 +413,19 @@ function LeftPanel(props) {
           <Select
             options={[
               {
-                text: 'Option 4',
+                text: 'Option',
                 value: 1,
               },
               {
-                text: 'Option 5',
+                text: 'Option',
                 value: 2,
               },
               {
-                text: 'Option 6',
+                text: 'Option',
                 value: 3,
               },
               {
-                text: 'Option 7',
+                text: 'Option',
                 value: 4,
               },
             ]}

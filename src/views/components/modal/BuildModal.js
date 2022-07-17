@@ -50,29 +50,30 @@ function BuildModal(props) {
             subtitle="2 Options"
             options={[
               {
-                text: "Option1",
+                text: "Option",
                 value: 1
               },
               {
-                text: "Option2",
+                text: "Option",
                 value: 2
               }
             ]}
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
           <Select
+
             subtitle="3 Options"
             options={[
               {
-                text: "Option1",
+                text: "Option",
                 value: 1
               },
               {
-                text: "Option2",
+                text: "Option",
                 value: 2
               },
               {
-                text: "Option3",
+                text: "Option",
                 value: 3
               }
             ]}
@@ -82,19 +83,19 @@ function BuildModal(props) {
             subtitle="4 Options"
             options={[
               {
-                text: "Option1",
+                text: "Option",
                 value: 1
               },
               {
-                text: "Option2",
+                text: "Option",
                 value: 2
               },
               {
-                text: "Option3",
+                text: "Option",
                 value: 3
               },
               {
-                text: "Option4",
+                text: "Option",
                 value: 4
               }
             ]}
@@ -105,23 +106,23 @@ function BuildModal(props) {
             subtitle="5 Options"
             options={[
               {
-                text: "Option1",
+                text: "Option",
                 value: 1
               },
               {
-                text: "Option2",
+                text: "Option",
                 value: 2
               },
               {
-                text: "Option3",
+                text: "Option",
                 value: 3
               },
               {
-                text: "Option4",
+                text: "Option",
                 value: 4
               },
               {
-                text: "Option5",
+                text: "Option",
                 value: 5
               }
             ]}

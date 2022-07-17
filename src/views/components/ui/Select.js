@@ -4,6 +4,8 @@ import { useState } from "react";
 function Select (props) {
   const [selected, setSelected] = useState(null);
 
+  console.log("--------" + props.stage)
+
   const handleSelection = (option) => {
     setSelected(option);
     props.onSelection(option);
@@ -38,11 +40,12 @@ function Select (props) {
   return (
     <div className="select-container pb-4">
       { props.subtitle ? <h3 className="subtitle mb-2">{props.subtitle}</h3> : null }
-      <div className={`grid grid-cols-${gridLength(props.options.length)} gap-2.5`}>
+      <div style={{display:'flex',flexWrap:'wrap',gap:'1.2rem'}}>
         {props.options.map((option) => (
           <>
             <button
-              className={`option${isSelected(option) ? ' selected': ''} px-4 py-2`}
+              style={{flex:'1'}}
+              className={`option${isSelected(option) ? ' selected': ''}  px-4 py-2`}
               key={option.value}
               onClick={() => handleSelection(option)}
             >
