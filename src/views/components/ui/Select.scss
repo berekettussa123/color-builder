@@ -1,3 +1,15 @@
+@media (min-width: 920px) {
+
+  .select-container {
+    padding-bottom: 0.7rem !important;
+  }
+  .modalselect{
+    display:flex;
+    color:white;
+    flex-wrap:wrap;
+    gap:0.7rem;
+  }
+}
 .select-container {
   .option {
     font-size: 1rem;
@@ -8,6 +20,7 @@
       background-color: #fff;
       color: #222
     }
+    
   }
   .grid-cols {
     &-2 {
