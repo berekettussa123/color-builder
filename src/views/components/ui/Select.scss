@@ -30,3 +30,14 @@
     }
   }
 }
+@media (max-width: 920px) {
+  .select-container {
+    padding-bottom: 0.4rem !important;
+  }
+  .modalselect{
+    display:flex;
+    color:white;
+    flex-wrap:wrap;
+    gap:0.5rem;
+  }
+}

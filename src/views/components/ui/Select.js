@@ -39,8 +39,8 @@ function Select (props) {
 
   return (
     <div className="select-container pb-4">
-      { props.subtitle ? <h3 className="subtitle mb-2">{props.subtitle}</h3> : null }
-      <div style={{display:'flex',flexWrap:'wrap',gap:'1.2rem'}}>
+      { props.subtitle ? <h3 style={{color:'white',fontSize:'18px'}} className="subtitle mb-2">{props.subtitle}</h3> : null }
+      <div className="modalselect" style={{}}>
         {props.options.map((option) => (
           <>
             <button

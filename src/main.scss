@@ -222,6 +222,10 @@ p {
   }
 }
 @media (max-width: 920px) {
+  .build-modal-header{
+    display: flex;
+    justify-content: space-between;
+  }
   .stagethrees {
     position: fixed !important;
 

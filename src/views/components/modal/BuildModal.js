@@ -2,11 +2,16 @@ import "./BuildModal.scss";
 import SelectImage from "../ui/SelectImage";
 import Select from "../ui/Select";
 import { IsopenContext } from "../../../context/isopenContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 function BuildModal(props) {
   console.log(props.stage==="two");
   const {allMaximize,arrowUp,dispatch} = useContext(IsopenContext)
+  const { isMizedOpen } = useContext(IsopenContext);
+  const [windowWidth, setWindowWidth] = useState();
+  useEffect(() => {
+    setWindowWidth(window.innerWidth && window.innerWidth <= 600);
+  }, []);
   return (
     <div className={`${(props.stage === "two") ? "build-modal-two ": " build-modal"} ${props.show ? "BuildModalShow" : " display-none"}`}>
       <div className={`build-modal-content${props.show ? " animate-bottom" : ""}`}>
@@ -47,7 +52,7 @@ function BuildModal(props) {
             ]}
           />
           <Select
-            subtitle="2 Options"
+            subtitle="Option with 2 choices"
             options={[
               {
                 text: "Option",
@@ -62,7 +67,7 @@ function BuildModal(props) {
           />
           <Select
 
-            subtitle="3 Options"
+            subtitle="Option with 3 choices"
             options={[
               {
                 text: "Option",
@@ -80,7 +85,7 @@ function BuildModal(props) {
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
           <Select
-            subtitle="4 Options"
+            subtitle="Option with 4 choices"
             options={[
               {
                 text: "Option",
@@ -103,7 +108,7 @@ function BuildModal(props) {
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
           <Select
-            subtitle="5 Options"
+            subtitle="Option with 5 choices"
             options={[
               {
                 text: "Option",
@@ -129,12 +134,12 @@ function BuildModal(props) {
             wide
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
-          <div>
+          {(!isMizedOpen || windowWidth) &&<div>
             <button className="cta mt-4">
               <p>Call To Action</p>
               <span>&rarr;</span>
             </button>
-          </div>
+          </div>}
         </div>
       </div>
     </div>
