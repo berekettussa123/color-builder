@@ -23,7 +23,6 @@ function OptionAccordion(props) {
      setBuildOpen(!buildOpen)
      setOpen(!open);
     };
-    console.log("*************build" + isMizedOpen);
   // const isOpenedClicked = () => {
   //   // setIsOpened(!isOpened);
   //   // console.log('7777777777777  ' + isOpened);

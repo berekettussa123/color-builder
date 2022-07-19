@@ -7,7 +7,7 @@ function Nav() {
   const [stage, setStage] = useState();
   const { allMaximize, dispatch, isMizedOpen,firstStage,secondStage,thirdStage } = useContext(IsopenContext);
 
-  console.log('stage is --------' + firstStage,secondStage,thirdStage);
+  // console.log('stage is --------' + firstStage,secondStage,thirdStage);
   
   const handleFirst=()=>{
     dispatch({type:'FIRSTSTAGE'})

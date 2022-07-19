@@ -4,11 +4,12 @@ import { useState } from "react";
 function Select (props) {
   const [selected, setSelected] = useState(null);
 
-  console.log("--------" + props.stage)
+
 
   const handleSelection = (option) => {
     setSelected(option);
-    props.onSelection(option);
+    // props.onSelection(option);
+    console.log("--------yewwwwww")
   }
 
   // useEffect(() => {
@@ -44,7 +45,7 @@ function Select (props) {
         {props.options.map((option) => (
           <>
             <button
-              style={{flex:'1'}}
+              style={{flex:'1',zIndex:''}}
               className={`option${isSelected(option) ? ' selected': ''}  px-4 py-2`}
               key={option.value}
               onClick={() => handleSelection(option)}

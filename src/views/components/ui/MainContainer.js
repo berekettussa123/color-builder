@@ -9,7 +9,6 @@ function MainContainer(props) {
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
-  console.log('------|||--------' + props.stage);
   return (
     <div className="main-container flex">
       <div

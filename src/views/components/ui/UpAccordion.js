@@ -17,7 +17,6 @@ function UpAccordion (props) {
     setStage(props.stage&&props.stage)
   }, [props.stage])
 
-  // console.log("000000000000------" +accordionOpen);
 
 
   return (
@@ -30,7 +29,7 @@ function UpAccordion (props) {
         className="w-full"
         onClick={() => setOpen(!open)}
       >
-        <div onClick={()=>{console.log("hellllllllo")}}  className="accordion-button h-14 py-3.5 px-6 flex items-center">
+        <div className="accordion-button h-14 py-3.5 px-6 flex items-center">
             <h3 className="grow text-left">{props.title || "Accordions"} <span className="showExtenstion">Up</span></h3>
           <div className={`arrow${open ? ' active' : ''} flex items-center mr-2 grow-0`}>
             <svg

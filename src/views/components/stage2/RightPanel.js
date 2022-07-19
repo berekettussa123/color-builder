@@ -22,7 +22,6 @@ function RightPanel(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
 
-  console.log('-------:::::::::::--------' + isMizedOpen);
   return (
     <>
       {

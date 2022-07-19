@@ -6,7 +6,6 @@ import {TbArrowsMaximize} from 'react-icons/tb'
 function MiddleContainer(props) {
   const {accordionOpen } = useContext(IsopenContext);
   const {allMaximize,dispatch} = useContext(IsopenContext)
-  console.log("i am middle -------- ");
 
   const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {

@@ -32,7 +32,7 @@ nav h1 {
   text-decoration: none;
   font-weight: 900;
   font-size: 1.3rem;
-  z-index: 90000000000000000000 !important;
+  z-index: 90000000000 !important;
 }
 
 .stages-container a.active {
@@ -70,11 +70,11 @@ nav h1 {
   display: none !important;
 }
 .mainNav {
-  z-index: 333333333333333333333330000000000000000000 !important;
+  z-index: 3333333333333333!important;
 }
 @media (max-width: 900px) {
   .mainNav {
-    z-index: 333333333333333333333330000000000000000000 !important;
+    z-index: 3333333333333 !important;
   }
   .menuOpened{
     margin-top: 0px !important;
@@ -85,7 +85,7 @@ nav h1 {
     left: 150px;
     display: initial; */
     font-size: 25px !important;
-    z-index: 90000000000000000000 !important;
+    z-index: 900000000000!important;
   }
 
   .hidemenu {

@@ -65,8 +65,6 @@ function LeftPanel(props) {
   useEffect(() => {
     setBoth(state.colorOption && state.colorOption.value);
     setBoth2(state.colorOption2 && state.colorOption2.value);
-    console.log(state.colorOption2 && state.colorOption2.value);
-    console.log(state.colorOption && state.colorOption.value);
   }, [state.colorOption, state.colorOption2]);
 
   const handlebutton = () => {
@@ -75,9 +73,9 @@ function LeftPanel(props) {
         (state.colorOption2 && state.colorOption2.value) ||
       (state.colorOption && state.colorOption.value)
     ) {
-      console.log('hi');
-      console.log(state.colorOption2 && state.colorOption2.value);
-      console.log(state.colorOption && state.colorOption.value);
+      // console.log('hi');
+      // console.log(state.colorOption2 && state.colorOption2.value);
+      // console.log(state.colorOption && state.colorOption.value);
       setBoth(state.colorOption2 && state.colorOption2.value);
       setBoth2(state.colorOption2 && state.colorOption2.value);
     }

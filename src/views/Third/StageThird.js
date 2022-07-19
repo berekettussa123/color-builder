@@ -16,7 +16,6 @@ function StageSecond(){
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
   const stage = 3;
-  console.log("++++++++++++" + accordionOpen);
   
   return (
     <>
