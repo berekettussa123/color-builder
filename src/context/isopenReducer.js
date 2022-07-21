@@ -45,6 +45,11 @@ const IsopenReducer = (state, action) => {
           thirdStage: !state.thirdStage,
         };
       }
+      case "MODALOPEN": {
+        return {
+          modalOpen: !state.modalOpen,
+        };
+      }
       default:
         return state;
     }

@@ -3,7 +3,7 @@ import { IsopenContext } from '../../../context/isopenContext';
 import './MainContainer.scss';
 
 function MainContainer(props) {
-  const { accordionOpen } = useContext(IsopenContext);
+  const { modalOpen,accordionOpen } = useContext(IsopenContext);
   const { isMizedOpen, dispatch } = useContext(IsopenContext);
   const [windowWidth, setWindowWidth] = useState();
   useEffect(() => {
@@ -19,7 +19,7 @@ function MainContainer(props) {
         {props.leftPanel}
       </div>
       <main
-        className={`${accordionOpen ? 'hideLeftPanel ' : ''} ${
+        className={`${accordionOpen ? 'hideLeftPanel ' : ''} ${modalOpen?' disableScroll ':''} ${
           props.stage === 'two' || props.stage === 'three'
             ? ' centerSecond'
             : ''

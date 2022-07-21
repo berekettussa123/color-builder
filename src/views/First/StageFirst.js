@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Nav from '../components/nav/Nav';
 import Card from '../components/stage1/Card';
 import Hero from '../components/stage1/Hero';
@@ -7,24 +7,30 @@ import BuildModal from '../components/modal/BuildModal';
 import MainContainer from '../components/ui/MainContainer';
 import './style.css';
 import './style.scss';
+import { IsopenContext } from '../../context/isopenContext';
 function StageFirst() {
   const [show, setShow] = useState(false);
   const [showBuild, setShowBuild] = useState(false);
+  const { dispatch } = useContext(IsopenContext);
 
   const showModal = () => {
     setShow(true);
+    dispatch({type:'MODALOPEN'})
   };
 
   const hideModal = () => {
     setShow(false);
+    dispatch({type:'MODALOPEN'})
   };
 
   const showBuildModal = () => {
     setShowBuild(true);
+    dispatch({type:'MODALOPEN'})
   };
 
   const hideBuildModal = () => {
     setShowBuild(false);
+    dispatch({type:'MODALOPEN'})
   };
 
   return (

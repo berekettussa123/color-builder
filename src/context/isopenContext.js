@@ -12,6 +12,7 @@ const INITIAL_STATE = {
     firstStage:false,
     secondStage:false,
     thirdStage:false,
+    modalOpen:false,
   };
 
   export const IsopenContext = createContext(INITIAL_STATE);
@@ -20,7 +21,7 @@ const INITIAL_STATE = {
       const [state,dispatch] = useReducer(IsopenReducer,INITIAL_STATE)
       return(
           <IsopenContext.Provider 
-          value={{firstStage:state.firstStage,secondStage:state.secondStage,thirdStage:state.thirdStage,accordionOpen:state.accordionOpen, colorPrimary:state.colorPrimary,arrowUp:state.arrowUp, isOpen:state.isOpen,isMizedOpen:state.isMizedOpen,allMaximize:state.allMaximize,singleOpened:state.singleOpened, dispatch}}>
+          value={{modalOpen:state.modalOpen, firstStage:state.firstStage,secondStage:state.secondStage,thirdStage:state.thirdStage,accordionOpen:state.accordionOpen, colorPrimary:state.colorPrimary,arrowUp:state.arrowUp, isOpen:state.isOpen,isMizedOpen:state.isMizedOpen,allMaximize:state.allMaximize,singleOpened:state.singleOpened, dispatch}}>
             {children}
           </IsopenContext.Provider>
       )

@@ -39,6 +39,7 @@ function Nav() {
         </NavLink>
 
         <NavLink
+        style={{margin:'0px 20px'}}
           to="/stage-two"
           className={({ isActive }) => (isActive ? 'active' : 'not-active')}
         >

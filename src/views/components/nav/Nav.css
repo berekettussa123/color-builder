@@ -6,12 +6,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  padding: 1rem;
+  padding: 40px 40px 60px 40px;
   top: 0;
   background-color: var(--bg);
   z-index: 90000000 !important ;
   /* z-index: 10; */
-  height: 4rem;
+  /* height: 4rem; */
 }
 
 nav h1 {
@@ -19,7 +19,10 @@ nav h1 {
   background-color: #d9d9d9;
   color: var(--bg);
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 20px;
+  text-align: center;
+  width: 70px;
+  height: 49px;
 }
 
 nav h1 {
@@ -31,14 +34,14 @@ nav h1 {
   color: var(--nav-color);
   text-decoration: none;
   font-weight: 900;
-  font-size: 1.3rem;
+  font-size: 36px;
   z-index: 90000000000 !important;
 }
 
 .stages-container a.active {
   color: white;
   /* display: initial; */
-  font-size: 24px !important;
+  font-size: 36px !important;
 }
 
 .stages-container .not-active {
@@ -169,12 +172,15 @@ nav h1 {
     justify-content: space-between;
     width: 100%;
     align-items: center;
-
+padding: 30px 20px 20px 20px;
     z-index: 9000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111 !important;
     /* position: sticky;
     top: 0px; */
   }
   .logo {
+    width: 48.7px;
+    height: 37px;
+    font-size: 13.9px;
     /* background-color: aqua; */
     /* display: initial; */
     /* margin-left: 20px !important;

@@ -86,6 +86,10 @@
   .inlineButton{
     width: 110% !important;
   }
+  .cta-container {
+    // padding: 0rem 0rem 0rem 0.3rem !important;
+    padding: 10px !important;
+  }
 }
 .iconButt {
   display: flex;
@@ -193,14 +197,19 @@ p {
 }
 
 @media (min-width: 920px) {
+  .rightButtonCTA{
+    width: 400px;
+  }
   .elements{
-    margin-top: 26rem;
+    margin-top: 35rem;
+    width: 1100px;
   }
   .marginCenterNO {
     // margin-top: 0rem !important;
+    margin-top: 152px;
   }
   .marginCenterYES {
-    margin-top: 4rem;
+    margin-top: 152px;
   }
   .leftContainers {
     margin-top: 5rem;
@@ -217,7 +226,7 @@ p {
 }
 @media (min-width: 920px) {
   .stagethreemobile {
-    margin-top: 5rem;
+    margin-top: 152px;
     // position: absolute;
   }
 }

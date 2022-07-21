@@ -79,3 +79,8 @@
 .overrideModal{
   z-index: 999999999999;
 }
+@media (min-width:920px){
+  .modal-header{
+    margin-bottom: 4rem !important;
+  }
+}
