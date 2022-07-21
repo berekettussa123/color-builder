@@ -16,7 +16,7 @@ function BuildModal(props) {
       <div className={`build-modal-content${props.show ? " animate-bottom" : ""}`}>
         <div className="build-modal-header">
           <h2>{props.title}</h2>
-          { (<button
+          {!(props.stage === "two") && (<button
             className="close-button"
             onClick={props.handleClose}
           >
