@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Nav from '../components/nav/Nav';
 import Card from '../components/stage1/Card';
 import Hero from '../components/stage1/Hero';
@@ -12,9 +12,13 @@ function StageFirst() {
   const [show, setShow] = useState(false);
   const [showBuild, setShowBuild] = useState(false);
   const { dispatch } = useContext(IsopenContext);
+  const [windowWidth, setWindowWidth] = useState();
+  useEffect(() => {
+    setWindowWidth(window.innerWidth && window.innerWidth <= 600);
+  }, []);
   window.onresize = function(event)
   {
-  document.location.reload(true);
+  document.location.reload(!windowWidth);
   }
 
   const showModal = () => {

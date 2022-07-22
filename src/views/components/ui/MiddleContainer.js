@@ -12,9 +12,9 @@ function MiddleContainer(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
   window.onresize = function(event)
-{
-document.location.reload(true);
-}
+  {
+  document.location.reload(!windowWidth);
+  }
 // console.log("this is   "+allMaximize);
   return (
     <div className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""} middle-container flex flex-col flex-1 ${allMaximize && " iconsMinimize"}`}>
