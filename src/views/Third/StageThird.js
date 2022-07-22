@@ -16,6 +16,10 @@ function StageSecond(){
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
   const stage = 3;
+  window.onresize = function(event)
+  {
+  document.location.reload(false);
+  }
   
   return (
     <>
