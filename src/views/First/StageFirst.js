@@ -18,7 +18,7 @@ function StageFirst() {
   }, []);
   window.onresize = function(event)
   {
-  document.location.reload(!windowWidth);
+  !windowWidth && document.location.reload(true);
   }
 
   const showModal = () => {

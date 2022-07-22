@@ -13,7 +13,7 @@ function MiddleContainer(props) {
   }, []);
   window.onresize = function(event)
   {
-  document.location.reload(!windowWidth);
+  !windowWidth && document.location.reload(true);
   }
 // console.log("this is   "+allMaximize);
   return (
