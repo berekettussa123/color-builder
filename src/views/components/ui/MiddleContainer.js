@@ -11,10 +11,10 @@ function MiddleContainer(props) {
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
-  window.onresize = function(event)
-  {
-  !windowWidth && document.location.reload(true);
-  }
+  // window.onresize = function(event)
+  // {
+  // !windowWidth && document.location.reload(true);
+  // }
 // console.log("this is   "+allMaximize);
   return (
     <div className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""} middle-container flex flex-col flex-1 ${allMaximize && " iconsMinimize"}`}>

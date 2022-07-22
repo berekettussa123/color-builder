@@ -47,7 +47,10 @@ function LeftPanel(props) {
     setShowBuild(true);
     dispatch({ type: 'SINGLEOPENED' });
   };
-
+  window.onresize = function(event)
+  {
+  document.location.reload(false);
+  }
   const hideBuildModal = () => {
     setShowBuild(false);
     // dispatch({ type: 'ARROWUP' });

@@ -17,6 +17,8 @@ function StageSecond() {
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
+  
+  
   return (
     <>
       <Nav />
