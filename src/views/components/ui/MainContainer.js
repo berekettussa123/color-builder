@@ -11,13 +11,16 @@ function MainContainer(props) {
   }, []);
   return (
     <div className="main-container flex">
+      
       <div
         className={`${
           accordionOpen ? 'hideLeftPanel ' : ''
         } ${props.stage==="one" ? "left-panel" :"left-panel left-panel2 "}   px-5 overflow-y-auto`}
       >
         {props.leftPanel}
+       
       </div>
+      
       <main
         className={`${accordionOpen ? 'hideLeftPanel ' : ''} ${modalOpen?' disableScroll ':''} ${
           props.stage === 'two' || props.stage === 'three'
@@ -32,6 +35,7 @@ function MainContainer(props) {
         (isMizedOpen && !windowWidth)) && (
         <div className={`${props.stage==="one" ? " right-panel " :" right-panel2 "}  px-5`}>{props.rightPanel}</div>
       )}
+      
     </div>
   );
 }

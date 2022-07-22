@@ -112,7 +112,8 @@ function OptionAccordion(props) {
       
       className={`option-accordion${open ? ' open' : ''} ${isMizedOpen && " FirstClosed"}`}
     >
-      <button className="w-full" onClick={!props.title === 'Build' ? openButton : handleBuild }>
+      <button className="w-full " onClick={!props.title === 'Build' ? openButton : handleBuild }>
+        
         {(isMizedOpen && windowWidth) &&<MiddleContainer/>}
         <div
           onClick={handleClick}

@@ -2,6 +2,7 @@ import "./UpAccordion.scss";
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { IsopenContext } from "../../../context/isopenContext";
+import {CgList} from 'react-icons/cg'
 
 function UpAccordion (props) {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,7 @@ function UpAccordion (props) {
         onClick={() => setOpen(!open)}
       >
         <div className="accordion-button h-14 py-3.5 px-6 flex items-center">
-            <h3 className="grow text-left">{props.title || "Accordions"} <span className="showExtenstion">Up</span></h3>
+        <CgList/><h3 className="grow text-left">{props.title || "Accordions"} <span className="showExtenstion">Up</span></h3>
           <div className={`arrow${open ? ' active' : ''} flex items-center mr-2 grow-0`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,8 +67,8 @@ function UpAccordion (props) {
         onClick={() => setOpen(!open)}
       >
         <div style={{zIndex:'2222299999999999'}} onClick={()=>{dispatch({ type: 'ACCORDIONOPEN' })}}  className="accordion-button h-14 py-3.5 px-6 flex items-center">
-            <h3 className="mobileAccordion grow text-left">{props.title || "Accordion"} <span className="showExtenstion">Up</span></h3>
-          <div className={`arrow${open ? ' active' : ''} flex items-center mr-2 grow-0`}>
+        
+        <div className={`arrow${open ? ' active' : ''} flex items-center mr-2 grow-0 uparrows`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
@@ -82,7 +83,9 @@ function UpAccordion (props) {
                 d="M8.465 20.485L16.95 12L8.465 3.515L7.05 4.929L14.122 12L7.05 19.071l1.415 1.414Z"
               />
             </svg>
-          </div>
+          </div><h3 className="mobileAccordion grow text-left">{props.title || "Accordion"} <span className="showExtenstion">Up</span></h3>
+        <CgList color="gray" fontSize={'30px'}/>  
+          
           {/* <p className="grow-0">{props.selectedOption || "Option"}</p> */}
         </div>
       </button>

@@ -12,6 +12,10 @@ function StageFirst() {
   const [show, setShow] = useState(false);
   const [showBuild, setShowBuild] = useState(false);
   const { dispatch } = useContext(IsopenContext);
+  window.onresize = function(event)
+  {
+  document.location.reload(true);
+  }
 
   const showModal = () => {
     setShow(true);

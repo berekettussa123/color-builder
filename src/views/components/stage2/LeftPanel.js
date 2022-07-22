@@ -14,15 +14,14 @@ import { IsopenContext } from '../../../context/isopenContext';
 import ColorCircle2 from '../ui/ColorCircle2';
 import { useEffect } from 'react';
 import MiddleContainer from '../ui/MiddleContainer';
-import {CgArrowRight} from 'react-icons/cg'
-
+import { CgArrowRight } from 'react-icons/cg';
 
 function LeftPanel(props) {
   const { singleOpened, dispatch } = useContext(IsopenContext);
   const [state, setState] = useState({});
   const [show, setShow] = useState(false);
   const [showBuild, setShowBuild] = useState(false);
-  
+
   const [both, setBoth] = useState(
     state.colorOption && state.colorOption.value
   );
@@ -96,30 +95,43 @@ function LeftPanel(props) {
   };
 
   return (
-    <>
+    <div>
       <div
-        className={`${allMaximize?"hideLeft":''} ${isMizedOpen ? ' LeftContainerOpen ' : 'leftContainers'}`}
+        className={`${allMaximize ? 'hideLeft' : ''} ${
+          isMizedOpen ? ' LeftContainerOpen ' : 'leftContainers'
+        }`}
       >
-       {(!isMizedOpen && windowWidth) && <div style={{position:'fixed',zIndex:'11111111111', marginBottom:'2rem !important'}}>
-          <MiddleContainer />
-        </div>}
-        <div  className={`${isMizedOpen ? "marginCenterNO" :'marginCenterYES'}`}>
-        {/* <div className="gradients"></div> */}
-        <OptionAccordion
-          stage="two"
-          showBuildModal={showBuildModal}
-          showBuild={showBuild}
-          title="Build"
-          selectedOption={state.imageOption && state.imageOption.value}
+        {!isMizedOpen && windowWidth && (
+          <div
+          
+            style={{
+              position: 'fixed',
+              zIndex: '11111111111',
+              marginBottom: '2rem !important',
+            }}
+          >
+            <MiddleContainer stage={2} />
+          </div>
+        )}
+        <div
+          className={`${isMizedOpen ? 'marginCenterNO' : 'marginCenterYES'}`}
         >
-          <BuildModal
-            title="Build Modal"
+          {/* <div className="gradients"></div> */}
+          <OptionAccordion
             stage="two"
-            show={showBuild}
-            handleClose={hideBuildModal}
-          />
+            showBuildModal={showBuildModal}
+            showBuild={showBuild}
+            title="Build"
+            selectedOption={state.imageOption && state.imageOption.value}
+          >
+            <BuildModal
+              title="Build Modal"
+              stage="two"
+              show={showBuild}
+              handleClose={hideBuildModal}
+            />
 
-          {/* <SelectImage
+            {/* <SelectImage
           options={[
             {
               title: "Option Title",
@@ -147,401 +159,436 @@ function LeftPanel(props) {
             },
           ]}
         /> */}
-        </OptionAccordion>
-        <OptionAccordion
-         title="TextInput" selectedOption={state.textOption}>
-          <SelectInput
-            onSelection={(option) => setOptions('textOption', option)}
-          />
-          {windowWidth&&<div
-            className="buttonLine"
-            style={{
-              width: '120%',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-          {windowWidth&&<button
-            className="inlineButton ininlineButtonPrimary"
-            // onClick={handlebutton}
+          </OptionAccordion>
+          <OptionAccordion title="TextInput" selectedOption={state.textOption}>
+            <SelectInput
+              onSelection={(option) => setOptions('textOption', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '120%',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                // onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt ">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+          <OptionAccordion
+            title="Color Option1"
+            selectedOption={<ColorCircle color={both} />}
           >
-            <div>Primary</div>
-            <div  className="iconButt ">
-            < CgArrowRight/>
+            <SelectColor
+              colors={[
+                { value: '#AD1457' },
+                { value: '#C62828' },
+                { value: '#4527A0' },
+                { value: '#6A1B9A' },
+                { value: '#1565C0' },
+                { value: '#283593' },
+                { value: '#0277BD' },
+                { value: '#00838F' },
+                { value: '#00695C' },
+                { value: '#2E7D32' },
+              ]}
+              onSelection={(option) => setOptions('colorOption', option)}
+            />
+            <div
+              className="buttonLine"
+              style={{
+                width: '100vw',
+                marginLeft: '-28px',
+                height: '10px',
+                backgroundColor: 'black',
+              }}
+            ></div>
+            <div style={{ backgroundColor: 'black' }} className="buttonAndIcon">
+              <button className="inlineButton" onClick={handlebutton2}>
+                <div>Secondary</div>
+                <div className="iconButtSecondary">
+                  <CgArrowRight />
+                </div>
+              </button>
+              {windowWidth && (
+                <button
+                  className="inlineButton primaryButton"
+                  // onClick={handlebutton}
+                >
+                  <div>Primary</div>
+                  <div className="iconButt">
+                    <CgArrowRight />
+                  </div>
+                </button>
+              )}
             </div>
-          </button>}
-        </OptionAccordion>
-        <OptionAccordion
-          title="Color Option1"
-          selectedOption={<ColorCircle color={both} />}
-        >
-          <SelectColor
-            colors={[
-              { value: '#AD1457' },
-              { value: '#C62828' },
-              { value: '#4527A0' },
-              { value: '#6A1B9A' },
-              { value: '#1565C0' },
-              { value: '#283593' },
-              { value: '#0277BD' },
-              { value: '#00838F' },
-              { value: '#00695C' },
-              { value: '#2E7D32' },
-            ]}
-            onSelection={(option) => setOptions('colorOption', option)}
-          />
-          <div
-            className="buttonLine"
-            style={{
-              width: '100vw',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>
-          <div style={{backgroundColor:'black'}} className="buttonAndIcon">
-            <button  className="inlineButton" onClick={handlebutton2}>
-              <div>Secondary</div>
-              <div className="iconButtSecondary">
-              < CgArrowRight/>
-              </div>
-            </button>
-            {windowWidth && (
-              <button
-              
-                className="inlineButton primaryButton"
-                // onClick={handlebutton}
-              >
-                <div>Primary</div>
+          </OptionAccordion>
+          <OptionAccordion
+            title="Color Option2"
+            selectedOption={<ColorCircle2 color={both2} />}
+          >
+            <SelectColor2
+              colors={[
+                { value: '#AD1457' },
+                { value: '#4527A0' },
+                { value: '#283593' },
+                { value: '#0277BD' },
+                { value: '#C62828' },
+                { value: '#6A1B9A' },
+                { value: '#1565C0' },
+                { value: '#00838F' },
+                { value: '#00695C' },
+                { value: '#2E7D32' },
+              ]}
+              onSelection={(option) => setOptions('colorOption2', option)}
+            />
+            <div
+              className="buttonLine"
+              style={{
+                width: '100vw',
+                marginLeft: '-28px',
+                height: '10px',
+                backgroundColor: 'black',
+              }}
+            ></div>
+            <div style={{ backgroundColor: 'black' }} className="buttonAndIcon">
+              <button className="inlineButton" onClick={handlebutton}>
+                <div>Secondary</div>
                 <div className="iconButt">
-                < CgArrowRight/>
+                  <CgArrowRight />
                 </div>
               </button>
-            )}
-          </div>
-        </OptionAccordion>
-        <OptionAccordion
-          title="Color Option2"
-          selectedOption={<ColorCircle2 color={both2} />}
-        >
-          <SelectColor2
-            colors={[
-              { value: '#AD1457' },
-              { value: '#4527A0' },
-              { value: '#283593' },
-              { value: '#0277BD' },
-              { value: '#C62828' },
-              { value: '#6A1B9A' },
-              { value: '#1565C0' },
-              { value: '#00838F' },
-              { value: '#00695C' },
-              { value: '#2E7D32' },
-            ]}
-            onSelection={(option) => setOptions('colorOption2', option)}
-          />
-          <div
-            className="buttonLine"
-            style={{
-              width: '100vw',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>
-          <div style={{backgroundColor:'black'}} className="buttonAndIcon">
-            <button className="inlineButton" onClick={handlebutton}>
-              <div>Secondary</div>
-              <div className="iconButt">
-              < CgArrowRight/>
-              </div>
-            </button>
-            {windowWidth && (
-              <button
-                className="inlineButton primaryButton"
-                // onClick={handlebutton}
-              >
-                <div>Primary</div>
-                <div className="iconButt">
-                < CgArrowRight/>
-                </div>
-              </button>
-            )}
-          </div>{' '}
-        </OptionAccordion>
+              {windowWidth && (
+                <button
+                  className="inlineButton primaryButton"
+                  // onClick={handlebutton}
+                >
+                  <div>Primary</div>
+                  <div className="iconButt">
+                    <CgArrowRight />
+                  </div>
+                </button>
+              )}
+            </div>{' '}
+          </OptionAccordion>
 
-        <OptionAccordion
-          title="Dual Color"
-          selectedOption={
-            <div className="flex">
-              <ColorCircle
-                color={state.dualColorOption1 && state.dualColorOption1.value}
-              />
-              <ColorCircle
-                color={state.dualColorOption2 && state.dualColorOption2.value}
-              />
-            </div>
-          }
-        >
-          <SelectColor
-            subtitle="Primary Color"
-            colors={[
-              { value: '#C62828' },
-              { value: '#AD1457' },
-              { value: '#6A1B9A' },
-              { value: '#4527A0' },
-              { value: '#283593' },
-              { value: '#1565C0' },
-              { value: '#0277BD' },
-              { value: '#00838F' },
-              { value: '#00695C' },
-              { value: '#2E7D32' },
-            ]}
-            onSelection={(option) => setOptions('dualColorOption1', option)}
-          />
-          <SelectColor
-            subtitle="Secondary Color"
-            colors={[
-              { value: '#C62828' },
-              { value: '#AD1457' },
-              { value: '#6A1B9A' },
-              { value: '#4527A0' },
-              { value: '#283593' },
-              { value: '#1565C0' },
-              { value: '#0277BD' },
-              { value: '#00838F' },
-              { value: '#00695C' },
-              { value: '#2E7D32' },
-            ]}
-            onSelection={(option) => setOptions('dualColorOption2', option)}
-          />
-          {windowWidth && <div
-            className="buttonLine"
-            style={{
-              width: '120%',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-          {windowWidth&&<button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
-            <div>Primary</div>
-            <div className="iconButt">
-              < CgArrowRight/>
-            </div>
-          </button>}
-        </OptionAccordion>
-        <OptionAccordion
-          title="2 Options"
-          selectedOption={state.firstOption && state.firstOption.text}
-        >
-          <Select
-            options={[
-              {
-                text: 'Option',
-                value: 1,
-              },
-              {
-                text: 'Option',
-                value: 2,
-              },
-            ]}
-            onSelection={async (option) => setOptions('firstOption', option)}
-          />
-          {windowWidth&&<div
-            className="buttonLine"
-            style={{
-              width: '120%',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-         {windowWidth && <button className="inlineButton ininlineButtonPrimary" onClick={handlebutton}>
-            <div>Primary</div>
-            <div className="iconButt">
-            < CgArrowRight/>
-            </div>
-          </button>}
-        </OptionAccordion>
-        <OptionAccordion
-          title="Title"
-          selectedOption={state.secondOption && state.secondOption.text}
-        >
-          <Select
-            options={[
-              {
-                text: 'Option',
-                value: 1,
-              },
-              {
-                text: 'Option',
-                value: 2,
-              },
-              {
-                text: 'Option',
-                value: 3,
-              },
-            ]}
-            onSelection={(option) => setOptions('secondOption', option)}
-          />
-         {windowWidth&& <div
-            className="buttonLine"
-            style={{
-              width: '120%',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-          {windowWidth && <button
-            className="inlineButton ininlineButtonPrimary"
-            // onClick={handlebutton}
+          <OptionAccordion
+            title="Dual Color"
+            selectedOption={
+              <div className="flex">
+                <ColorCircle
+                  color={state.dualColorOption1 && state.dualColorOption1.value}
+                />
+                <ColorCircle
+                  color={state.dualColorOption2 && state.dualColorOption2.value}
+                />
+              </div>
+            }
           >
-            <div>Primary</div>
-            <div className="iconButt">
-            < CgArrowRight/>
-            </div>
-          </button>}
-        </OptionAccordion>
-        <OptionAccordion
-          title="Title"
-          selectedOption={state.thirdOption && state.thirdOption.text}
-        >
-          <Select
-            options={[
-              {
-                text: 'Option',
-                value: 1,
-              },
-              {
-                text: 'Option',
-                value: 2,
-              },
-              {
-                text: 'Option',
-                value: 3,
-              },
-              {
-                text: 'Option',
-                value: 4,
-              },
-            ]}
-            onSelection={(option) => setOptions('thirdOption', option)}
-          />
-         {windowWidth && <div
-            className="buttonLine"
-            style={{
-              width: '100vw',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-          {windowWidth&&<button
-            className="inlineButton ininlineButtonPrimary"
-            // onClick={handlebutton}
+            <SelectColor
+              subtitle="Primary Color"
+              colors={[
+                { value: '#C62828' },
+                { value: '#AD1457' },
+                { value: '#6A1B9A' },
+                { value: '#4527A0' },
+                { value: '#283593' },
+                { value: '#1565C0' },
+                { value: '#0277BD' },
+                { value: '#00838F' },
+                { value: '#00695C' },
+                { value: '#2E7D32' },
+              ]}
+              onSelection={(option) => setOptions('dualColorOption1', option)}
+            />
+            <SelectColor
+              subtitle="Secondary Color"
+              colors={[
+                { value: '#C62828' },
+                { value: '#AD1457' },
+                { value: '#6A1B9A' },
+                { value: '#4527A0' },
+                { value: '#283593' },
+                { value: '#1565C0' },
+                { value: '#0277BD' },
+                { value: '#00838F' },
+                { value: '#00695C' },
+                { value: '#2E7D32' },
+              ]}
+              onSelection={(option) => setOptions('dualColorOption2', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '120%',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+          <OptionAccordion
+            title="2 Options"
+            selectedOption={state.firstOption && state.firstOption.text}
           >
-            <div>Secondary</div>
-            <div className="iconButt">
-            < CgArrowRight/>
-            </div>
-          </button>}
-        </OptionAccordion>
-        <OptionAccordion
-          title="Title"
-          selectedOption={state.fourthOption && state.fourthOption.text}
-        >
-          <Select
-            subtitle="Subtitle"
-            options={[
-              {
-                text: 'Option A',
-                value: 1,
-              },
-              {
-                text: 'Option B',
-                value: 2,
-              },
-            ]}
-            onSelection={(option) => setOptions('fourthOption', option)}
-          />
-          {windowWidth&&<div
-            className="buttonLine"
-            style={{
-              width: '120%',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-          {windowWidth&&<button
-            className="inlineButton ininlineButtonPrimary"
-            // onClick={handlebutton}
+            <Select
+              options={[
+                {
+                  text: 'Option',
+                  value: 1,
+                },
+                {
+                  text: 'Option',
+                  value: 2,
+                },
+              ]}
+              onSelection={async (option) => setOptions('firstOption', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '120%',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+          <OptionAccordion
+            title="Title"
+            selectedOption={state.secondOption && state.secondOption.text}
           >
-            <div>Primary</div>
-            <div className="iconButt">
-            < CgArrowRight/>
-            </div>
-          </button>}
-        </OptionAccordion>
-        <OptionAccordion
-          title="Title"
-          selectedOption={`${state.fifthOption ? state.fifthOption.text : ''} ${
-            state.sixthOption ? state.sixthOption.text : ''
-          }`}
-        >
-          <Select
-            subtitle="Subtitle"
-            options={[
-              {
-                text: 'Option 1',
-                value: 1,
-              },
-              {
-                text: 'Option 2',
-                value: 2,
-              },
-            ]}
-            onSelection={(option) => setOptions('fifthOption', option)}
-          />
-          <Select
-            subtitle="Subtitle"
-            options={[
-              {
-                text: 'Option 3',
-                value: 1,
-              },
-              {
-                text: 'Option 4',
-                value: 2,
-              },
-            ]}
-            onSelection={(option) => setOptions('sixthOption', option)}
-          />
-          {windowWidth&&<div
-            className="buttonLine"
-            style={{
-              width: '120%',
-              marginLeft: '-28px',
-              height: '10px',
-              backgroundColor: 'black',
-            }}
-          ></div>}
-         {windowWidth&& <button
-            className="inlineButton ininlineButtonPrimary"
-            // onClick={handlebutton}
+            <Select
+              options={[
+                {
+                  text: 'Option',
+                  value: 1,
+                },
+                {
+                  text: 'Option',
+                  value: 2,
+                },
+                {
+                  text: 'Option',
+                  value: 3,
+                },
+              ]}
+              onSelection={(option) => setOptions('secondOption', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '120%',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                // onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+          <OptionAccordion
+            title="Title"
+            selectedOption={state.thirdOption && state.thirdOption.text}
           >
-            <div>Primary</div>
-            <div className="iconButt">
-            < CgArrowRight/>
-            </div>
-          </button>}
-        </OptionAccordion>
-        </div>        {/* <div style={{ height: '1.2rem' }}></div>
-      <div className="gradients"></div> */}
+            <Select
+              options={[
+                {
+                  text: 'Option',
+                  value: 1,
+                },
+                {
+                  text: 'Option',
+                  value: 2,
+                },
+                {
+                  text: 'Option',
+                  value: 3,
+                },
+                {
+                  text: 'Option',
+                  value: 4,
+                },
+              ]}
+              onSelection={(option) => setOptions('thirdOption', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '100vw',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                // onClick={handlebutton}
+              >
+                <div>Secondary</div>
+                <div className="iconButt">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+          <OptionAccordion
+            title="Title"
+            selectedOption={state.fourthOption && state.fourthOption.text}
+          >
+            <Select
+              subtitle="Subtitle"
+              options={[
+                {
+                  text: 'Option A',
+                  value: 1,
+                },
+                {
+                  text: 'Option B',
+                  value: 2,
+                },
+              ]}
+              onSelection={(option) => setOptions('fourthOption', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '120%',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                // onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+          <OptionAccordion
+            title="Title"
+            selectedOption={`${
+              state.fifthOption ? state.fifthOption.text : ''
+            } ${state.sixthOption ? state.sixthOption.text : ''}`}
+          >
+            <Select
+              subtitle="Subtitle"
+              options={[
+                {
+                  text: 'Option 1',
+                  value: 1,
+                },
+                {
+                  text: 'Option 2',
+                  value: 2,
+                },
+              ]}
+              onSelection={(option) => setOptions('fifthOption', option)}
+            />
+            <Select
+              subtitle="Subtitle"
+              options={[
+                {
+                  text: 'Option 3',
+                  value: 1,
+                },
+                {
+                  text: 'Option 4',
+                  value: 2,
+                },
+              ]}
+              onSelection={(option) => setOptions('sixthOption', option)}
+            />
+            {windowWidth && (
+              <div
+                className="buttonLine"
+                style={{
+                  width: '120%',
+                  marginLeft: '-28px',
+                  height: '10px',
+                  backgroundColor: 'black',
+                }}
+              ></div>
+            )}
+            {windowWidth && (
+              <button
+                className="inlineButton ininlineButtonPrimary"
+                // onClick={handlebutton}
+              >
+                <div>Primary</div>
+                <div className="iconButt">
+                  <CgArrowRight />
+                </div>
+              </button>
+            )}
+          </OptionAccordion>
+        </div>
       </div>
-    </>
+        
+
+        
+        
+    </div>
   );
 }
 

@@ -11,9 +11,13 @@ function MiddleContainer(props) {
   useEffect(() => {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
+  window.onresize = function(event)
+{
+document.location.reload(true);
+}
 // console.log("this is   "+allMaximize);
   return (
-    <div className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""}middle-container flex flex-col flex-1 ${allMaximize && " iconsMinimize"}`}>
+    <div className= {`${!windowWidth ? "centerStageTwo" : ""} ${accordionOpen ? "CenterClosedContext ": ""} middle-container flex flex-col flex-1 ${allMaximize && " iconsMinimize"}`}>
       <div className="middle-container-content flex-1 w-full">
       </div>
       <div className={` ${props.stage==="two" && "stageTwoCenter"}  ${props.stage===3 ? " stageThreeCenter " : ''} middle-container-menu flex flex-col justify-center items-center`}>

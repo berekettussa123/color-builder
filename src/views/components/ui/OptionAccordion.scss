@@ -1,4 +1,7 @@
 @media (min-width: 920px) {
+  .windowCenter{
+    display: none;
+  }
   .option-accordion {
     width: 400px !important;
     &.open {
@@ -53,6 +56,7 @@
 }
 
 @media (max-width: 920px) {
+ 
   .option-accordion{
     .accordion-body {
       .accordion-body-content{

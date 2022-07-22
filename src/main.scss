@@ -83,6 +83,7 @@
   height: 56px;
 }
 @media (max-width: 920px) {
+  
   .inlineButton{
     width: 110% !important;
   }
@@ -197,6 +198,9 @@ p {
 }
 
 @media (min-width: 920px) {
+  .middleSecond{
+    display: none !important;
+  }
   .rightButtonCTA{
     width: 400px;
   }
@@ -349,7 +353,7 @@ p {
     flex-direction: row;
     align-items: center;
     // align-self: flex-end;
-    gap: 1.8rem !important;
+    // gap: 1.8rem !important;
     // z-index: 999;
     // height: 30px;
   }

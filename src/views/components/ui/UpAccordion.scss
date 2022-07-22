@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 920px) {
+  .uparrows{
+    display: none;
+  }
   .accordion-body {
     // width: 100vw;
   }

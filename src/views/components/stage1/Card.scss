@@ -101,7 +101,25 @@
 }
 @media (max-width: 920px) {
   .card-container{
-    // margin-top: 4rem;
-    // z-index: -9000000000000 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  .firstButton{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .card-container{
+  .img-container{
+    width: 200px;
+    height: 200px};
+  }
+  .info-button{
+    position: absolute !important;
+    right: 25px;
+    top: 25px;
   }
 }
