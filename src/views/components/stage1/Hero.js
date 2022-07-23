@@ -4,6 +4,10 @@ import Filters from '../ui/Filters';
 
 function Hero(props) {
   const [scroll, setScroll] = useState();
+  const [windowWidth, setWindowWidth] = useState();
+  useEffect(() => {
+    setWindowWidth(window.innerWidth && window.innerWidth <= 600);
+  }, []);
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScroll(window.scrollY);
@@ -37,7 +41,8 @@ function Hero(props) {
               <div style={{position:'relative'}} className="cta-container cta-hero">
                 <button  className="cta " onClick={props.handleOpen}>
                   <div>
-                    <p className="">{scroll?"Construct From Ground Up": "Call To Action"}</p>{' '}
+                    {!windowWidth&&<p className="">{scroll?"Construct From Ground Up": "Call To Action"}</p>}
+                    {windowWidth&&<p className="">Call To Action</p>}
                   </div>
                   <div>
                     <span>&rarr;</span>
