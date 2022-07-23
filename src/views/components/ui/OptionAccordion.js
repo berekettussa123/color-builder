@@ -112,7 +112,7 @@ function OptionAccordion(props) {
       
       className={`option-accordion${open ? ' open' : ''} ${isMizedOpen && " FirstClosed"}`}
     >
-      <button className="w-full " onClick={!props.title === 'Build' ? openButton : handleBuild }>
+      <button style={{marginBottom:'-20px'}} className="w-full " onClick={!props.title === 'Build' ? openButton : handleBuild }>
         
         {(isMizedOpen && windowWidth) &&<MiddleContainer/>}
         <div
@@ -154,7 +154,7 @@ function OptionAccordion(props) {
             open ? ' active' : `${isOpened ? ' colorno' : ''}`
           }`}
         >
-          <div className="accordion-body-content py-3.5 px-6">
+          <div className="accordion-body-content py-3.5 px-4">
             {props.children}
           </div>
         </div>

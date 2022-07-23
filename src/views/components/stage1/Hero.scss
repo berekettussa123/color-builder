@@ -15,14 +15,21 @@
       flex-direction: column;
       transition: 0.2s;
       &.scrolled {
-        min-height: 10rem;
+        min-height: 158px;
         
+      }
+      .scrollpara{
+
+        // max-width: 340px;
+      }
+      .notscrolled{
+        max-width: 340px !important;
       }
     }
    
   }
   .gradients {
-    height: 4rem;
+    height: 63px;
     background: linear-gradient(180deg, #161616 0%, rgba(199, 66, 66, 0) 100%);
   }
   
@@ -56,12 +63,13 @@
 }
 .button-container{
   .cta{
+    width: 320px;
     margin-bottom: 1rem;
   }
 }
 .cta-container{
   // margin: 0;
-  width: 50%;
+  width: auto;
   background-color: #D9D9D9;
   
 }

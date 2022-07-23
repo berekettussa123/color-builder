@@ -128,7 +128,7 @@ function LeftPanel(props) {
             selectedOption={state.imageOption && state.imageOption.value}
           >
             <BuildModal
-              title="Build Modal"
+              title="Option With Image"
               stage="two"
               show={showBuild}
               handleClose={hideBuildModal}

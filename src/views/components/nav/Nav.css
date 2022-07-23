@@ -6,7 +6,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  padding: 40px 40px 60px 40px;
+  padding: 40px 40px 51px 40px;
   top: 0;
   background-color: var(--bg);
   z-index: 90000000 !important ;

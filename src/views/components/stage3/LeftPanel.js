@@ -120,7 +120,7 @@ function LeftPanel(props) {
 
      <button
         className="w-full"
-        style={{position:'absolute',height:'56px',bottom:'3rem',left:'40px',backgroundColor:'#222222',width:'180px'}}
+        style={{position:'absolute',height:'56px',bottom:'60px',left:'40px',backgroundColor:'#222222',width:'180px'}}
       >
         <div style={{zIndex:'2222299999999999'}}   className="accordion-button h-14 py-3.5 px-6 flex items-center">
           <div className={`arrow} flex items-center mr-2 grow-0`}>

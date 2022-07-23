@@ -25,8 +25,8 @@ function Hero(props) {
         <div className={`hero-container-inner${scroll ? ' scrolled' : ''}`}>
           <header className="page-header">
             <div className="half">
-              <h2>Title</h2>
-              <p>
+              <h2>{scroll? "Blank State" :'Title'}</h2>
+              <p className={`${scroll ? ' scrollpara':' notscrolled'}`} style={{fontSize:'18px !important',fontWeight:'bolder'}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
                 amet nisl nec massa egestas ornare. Nulla volutpat, ante ac
                 sodales luctus, nisi dui varius purus, eleifend lacinia justo
@@ -37,7 +37,7 @@ function Hero(props) {
               <div style={{position:'relative'}} className="cta-container cta-hero">
                 <button  className="cta " onClick={props.handleOpen}>
                   <div>
-                    <p className="">Call To Action</p>{' '}
+                    <p className="">{scroll?"Construct From Ground Up": "Call To Action"}</p>{' '}
                   </div>
                   <div>
                     <span>&rarr;</span>

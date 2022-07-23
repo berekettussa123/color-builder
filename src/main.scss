@@ -198,6 +198,12 @@ p {
 }
 
 @media (min-width: 920px) {
+  .centerStageTwo {
+    position: absolute;
+    bottom: 20px  ;
+    margin-left: -180px;
+    // flex: 5;
+  }
   .middleSecond{
     display: none !important;
   }
@@ -210,10 +216,10 @@ p {
   }
   .marginCenterNO {
     // margin-top: 0rem !important;
-    margin-top: 152px;
+    margin-top: 142px;
   }
   .marginCenterYES {
-    margin-top: 152px;
+    margin-top: 142px;
   }
   .leftContainers {
     margin-top: 5rem;
@@ -225,7 +231,9 @@ p {
     display: flex;
   }
   .accordionAndCTA {
-    margin-top: 4rem;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
   }
 }
 @media (min-width: 920px) {
@@ -357,9 +365,7 @@ p {
     // z-index: 999;
     // height: 30px;
   }
-  .centerStageTwo {
-    // flex: 5;
-  }
+  
   .accordionAndCTA {
     .rightButtonCTA {
       display: flex;

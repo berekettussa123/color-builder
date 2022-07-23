@@ -15,7 +15,7 @@ function BuildModal(props) {
     <div className={`${(props.stage === "two") ? "build-modal-two ": " build-modal"} ${props.show ? "BuildModalShow" : " display-none"}`}>
       <div className={`build-modal-content${props.show ? " animate-bottom" : ""}`}>
         <div className="build-modal-header">
-          <h2>{props.title}</h2>
+          <h2 style={{color:'white'}}>{props.title}</h2>
           {!(props.stage === "two") && (<button
             className="close-button"
             onClick={props.handleClose}
@@ -44,55 +44,57 @@ function BuildModal(props) {
             ]}
           />
           <Select
+           on2={props.stage}
             subtitle="Option with 2 choices"
             options={[
               {
-                text: "Option",
+                text: "OPTION",
                 value: 1
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 2
               }
             ]}
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
           <Select
-
+            on3={props.stage}
             subtitle="Option with 3 choices"
             options={[
               {
-                text: "Option",
+                text: "OPTION",
                 value: 1
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 2
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 3
               }
             ]}
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
           <Select
+           on4={props.stage}
             subtitle="Option with 4 choices"
             options={[
               {
-                text: "Option",
+                text: "OPTION",
                 value: 1
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 2
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 3
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 4
               }
             ]}
@@ -100,26 +102,27 @@ function BuildModal(props) {
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
           <Select
+           on5={props.stage}
             subtitle="Option with 5 choices"
             options={[
               {
-                text: "Option",
+                text: "OPTION",
                 value: 1
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 2
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 3
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 4
               },
               {
-                text: "Option",
+                text: "OPTION",
                 value: 5
               }
             ]}

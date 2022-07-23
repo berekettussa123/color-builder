@@ -30,8 +30,8 @@ function RightPanel(props) {
          
           <div
             className={`${
-              props.stage === 3 ? 'stagethreeacc flex-col justify-end pb-4' : ''
-            } accordionAndCTA flex  flex-col  justify-end pb-4 ${
+              props.stage === 3 ? 'stagethreeacc flex-col justify-end' : ''
+            } accordionAndCTA flex  flex-col  justify-end ${
               allMaximize ? ' minimizeMenu': ''
             } ${isMizedOpen ? ' hideMixed' : ''}`}
           >
@@ -164,18 +164,18 @@ function RightPanel(props) {
                 {props.stage === 3 &&
                   windowWidth &&
                   !accordionOpen && !isMizedOpen &&
-                  'Call to action'}
+                  'Call To Action'}
                    {props.stage === 3 &&
                   windowWidth && !accordionOpen && isMizedOpen &&
                   'Primary'}
                 {props.stage === 3 && windowWidth && accordionOpen && 'Primary'}
-                {props.stage === 2 && windowWidth &&  !accordionOpen && 'Call to action'}
-                {props.stage === 2 && windowWidth && accordionOpen && 'Call to action'}
-                {props.stage === 2 && !windowWidth && !accordionOpen && 'Call to action'}
-                {props.stage === 3 && !windowWidth && !accordionOpen && 'Call to action'}
-                {props.stage === 3 && !windowWidth && accordionOpen && 'Call to action'}
+                {props.stage === 2 && windowWidth &&  !accordionOpen && 'Call To Action'}
+                {props.stage === 2 && windowWidth && accordionOpen && 'Call To Action'}
+                {props.stage === 2 && !windowWidth && !accordionOpen && 'Call To Action'}
+                {props.stage === 3 && !windowWidth && !accordionOpen && 'Call To Action'}
+                {props.stage === 3 && !windowWidth && accordionOpen && 'Call To Action'}
                 {props.stage === 3 && windowWidth && isMizedOpen && 'Primary'}
-                {props.stage === 2 && !windowWidth &&  accordionOpen && 'Call to action'}
+                {props.stage === 2 && !windowWidth &&  accordionOpen && 'Call To Action'}
               </p>
               <span>&rarr;</span>
             </button>
