@@ -36,7 +36,7 @@ function Hero(props) {
                 <>
                   <p
                     className={`${scroll ? ' scrollpara' : ' notscrolled'}`}
-                    style={{ fontSize: '18px !important', fontWeight: '500' }}
+                    style={{ fontSize: '18px !important', fontWeight: '500', }}
                   >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     sit amet nisl nec massa egestas ornare. Nulla volutpat, ante
@@ -54,11 +54,11 @@ function Hero(props) {
                }
                { windowWidth&& (
                   <>
-                  <p style={{ fontSize: '18px !important', fontWeight: '500',marginTop: '0px' }}>
+                  <p style={{ fontSize: '18px !important', fontWeight: '500',marginTop: '0px',marginBottom:'30px' }}>
                     Let your imagination go wild and create your own unique glove
                     from ground up.
                   </p>
-                  <div style={{position:'relative' ,top:'6px'}} className="tags-container">
+                  <div style={{position:'relative' ,top:'-16px'}} className="tags-container">
                       <ul className="tags">
                         <li className="tag-title">Tag</li>
                         <li style={{color:'white'}} className="main-tag">Series</li>

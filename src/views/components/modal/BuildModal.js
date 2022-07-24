@@ -15,7 +15,7 @@ function BuildModal(props) {
     <div className={`${(props.stage === "two") ? "build-modal-two ": " build-modal"} ${props.show ? "BuildModalShow" : " display-none"}`}>
       <div className={`build-modal-content${props.show ? " animate-bottom" : ""}`}>
         <div className="build-modal-header">
-          <h2 style={{color:'white'}}>{props.title}</h2>
+          <h2 style={{color:'white',fontSize:'36px'}}>{props.title}</h2>
           {!(props.stage === "two") && (<button
             className="close-button"
             onClick={props.handleClose}
@@ -28,6 +28,7 @@ function BuildModal(props) {
         </div>
         <div className="build-modal-body">
           <SelectImage
+          subtitle="Option With Image"
             options={[
               {
                 title: "Option Title",

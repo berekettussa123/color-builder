@@ -5,7 +5,7 @@ function Modal(props) {
     <div className={`modal ${props.show ? "overrideModal" : " display-none"}`}>
       <div className={`modal-content${props.show ? " animate-bottom" : ""}`}>
         <div className="modal-header">
-          <h2>{props.title}</h2>
+          <h2 style={{fontSize:'34px'}}>{props.title}</h2>
           <button
             className="close-button"
             onClick={props.handleClose}

@@ -56,10 +56,10 @@ function StageFirst() {
           </section>
         </div>
       </MainContainer>
-      <Modal title="Modal Title" show={show} handleClose={hideModal} />
+      <Modal title="Title" show={show} handleClose={hideModal} />
       <BuildModal
         stage="one"
-        title="Build Modal Title"
+        title="Title"
         show={showBuild}
         handleClose={hideBuildModal}
       />
