@@ -21,7 +21,7 @@ function SelectImage (props) {
 
   return (
     <div className="select-image-container pb-2">
-      { props.subtitle ? <h3 style={{fontSize:'18px'}} className="subtitle mb-2">{props.subtitle}</h3> : null }
+      { props.subtitle ? <h3 style={{fontSize:'18px'}} className="subtitle mb-2">{props.stage==="one"&& props.subtitle}</h3> : null }
       <div className={`grid grid-cols-${props.options.length > 2 ? '3' : '2'} gap-3`}>
         {props.options.map((option) => (
           <>
