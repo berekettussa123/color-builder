@@ -123,8 +123,8 @@ nav h1 {
     display: flex;
     gap: 4rem;
     flex-direction: column;
-    padding: 10px 0px;
-    margin-right: 5px;
+    /* padding: 10px 0px;
+    margin-right: 5px; */
     
   }
   .navMobile{
@@ -154,20 +154,25 @@ nav h1 {
     
     transform: rotate(-90deg);
     transition: transform 0.2s ease-in;
+    position: relative;
+    right: -14px;
   }
   .closedArr {
     
     transform: rotate(90deg);
     transition: transform 0.2s ease-in;
+    position: relative;
+    right: -14px;
   }
   .logo, a{
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
   }
   a.active{
     transform: scale();
   }
 
   nav {
+    max-height: 93px;
     display: flex;
     position: fixed;
     justify-content: space-between;
@@ -177,11 +182,18 @@ padding: 23px 20px 20px 20px;
     z-index: 9000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111 !important;
     /* position: sticky;
     top: 0px; */
+    
   }
   .logo {
-    width: 70px;
-    height: 49px;
-    font-size: 20px;
+    width: 48.57px;
+    height: 34px;
+    font-size: 13.88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Inter', sans-serif !important;
+    /* font-family: ; */
     /* background-color: aqua; */
     /* display: initial; */
     /* margin-left: 20px !important;

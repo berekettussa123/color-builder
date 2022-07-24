@@ -3,7 +3,7 @@ import "./Card.scss";
 function Card(props) {
   return (
     <div className="card-container">
-      <div>
+      <div className="tagandtitle">
       <div className="card-header">
         <h2>Title</h2>
         <div>
@@ -25,7 +25,7 @@ function Card(props) {
           <li className="main-tag">Series</li>
         </ul>
         <ul className="tags regular-tags">
-          <li>Regular</li>
+          <li>Regular Tag</li>
         </ul>
       </div>
       </div>

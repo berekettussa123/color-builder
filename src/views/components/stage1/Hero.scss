@@ -30,6 +30,8 @@
   }
   .gradients {
     height: 63px;
+    position: relative;
+    margin-top: -1px;
     background: linear-gradient(180deg, #161616 0%, rgba(199, 66, 66, 0) 100%);
   }
   
@@ -53,6 +55,8 @@
   }
   h2{
     font-size: 34px !important;
+  line-height: 36px;
+  padding-top: 20px;
   }
 }
 .button-container{
@@ -115,7 +119,8 @@
   }
   .hero-container{
     z-index: 900 !important;
-    padding: 0px 10px;
+    padding: 0px 20px;
+    line-height: 20px;  
 
     .gradient {
       z-index: 599999!important;
@@ -124,7 +129,7 @@
     }
   }
     .page-header{
-      margin-top: 90px !important;
+      margin-top: 93px !important;
       background-color: #D9D9D9 !important;
     }
     .button-container{
@@ -140,7 +145,7 @@
         background-color: #D9D9D9;
         width: 94.2%!important;
         position: fixed !important;
-        top: 97px !important;
+        top: 93px !important;
         left: 100 !important;
         right: 100 !important;
         

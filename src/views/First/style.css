@@ -117,7 +117,9 @@ div.text{display: none}
 }
 @media (max-width: 920px) {
   .elements{
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+    position: absolute;
+    top: 409px;
   }
 }
 @media (min-width: 900px){

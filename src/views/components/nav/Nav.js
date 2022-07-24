@@ -24,7 +24,7 @@ function Nav() {
   }
   return (
     <nav id="mainNav">
-      <h1 className="logo">LOGO</h1>
+      <h1 style={{fontFamily: 'Inter',fontWeight:'500'}} className="logo">LOGO</h1>
       <div className="stages-container">
         <NavLink
           

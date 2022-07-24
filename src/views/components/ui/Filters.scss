@@ -1,3 +1,16 @@
+@media (min-width:920px){
+
+  .filters-desktop{
+    padding-top: 20px;
+    padding-bottom: 14px;
+    
+  }
+  .filters-desktop *{
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
 .filters{
   &-mobile {
     width: 100%;
@@ -11,6 +24,7 @@
     box-shadow: 5px 5px 0 var(--bg);
     display: block;
     z-index: 90000000000 !important;
+    margin-top: 20px;
     @media (min-width: 768px) {
       display: none;
     } 

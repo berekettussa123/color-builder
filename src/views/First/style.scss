@@ -65,7 +65,7 @@ h2{
   height: 100%;
   flex: 1;
   .half{
-    padding: 20px;
+    padding: 0px 20px;
     background-color: #E3E3E3;
   }
   .image{
@@ -86,8 +86,11 @@ h2{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-  margin: 1rem 0;
+  // margin: 1rem 0;
   @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
   }
 }

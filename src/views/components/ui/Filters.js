@@ -7,12 +7,12 @@ function Filters(props) {
   const handleSelection = (option) => {
     setSelected(option);
   }
-  // const [scroll, setScroll] = useState();
-  // useEffect(() => {
-  //   window.addEventListener('scroll', () => {
-  //     setScroll(window.scrollY);
-  //   });
-  // }, []);
+  const [scroll, setScroll] = useState();
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScroll(window.scrollY);
+    });
+  }, []);
 
   // document.addEventListener('scroll', function () {
   //   const el = document.getElementById('Navigation');
@@ -41,7 +41,7 @@ function Filters(props) {
         }
       </div>
       <select
-      style={{backgroundColor:'black !important'}}
+      style={{backgroundColor:'black !important',fontSize:'20px'}}
         className="filters-mobile"
         onChange={(e) => handleSelection(e.target.value)}
       >
