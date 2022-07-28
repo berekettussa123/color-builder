@@ -148,10 +148,10 @@ function OptionAccordion(props) {
       </button>
       {props.title === 'Build' && (
         <div
-        onClick={handleBuild}
+        // onClick={handleBuild}
           // id={`test ${open ? 'test' : ''}`}
           className={`accordion-body ${
-            open ? ' active' : `${isOpened ? ' colorno' : ''}`
+            open ? ' active ' : `${isOpened ? ' colorno ' : ''}`
           }`}
         >
           <div className="accordion-body-content py-3.5 px-4">

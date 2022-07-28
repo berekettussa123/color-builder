@@ -12,7 +12,7 @@ function BuildModal(props) {
     setWindowWidth(window.innerWidth && window.innerWidth <= 600);
   }, []);
   return (
-    <div className={`${(props.stage === "two") ? "build-modal-two ": " build-modal"} ${props.show ? "BuildModalShow" : " display-none"}`}>
+    <div className={`${(props.stage === "two") ? "build-modal-two ": " build-modal"} ${props.show ? " BuildModalShow " : " display-none"}`}>
       <div className={`build-modal-content${props.show ? " animate-bottom" : ""}`}>
         <div className="build-modal-header">
           {props.stage==="two" &&
@@ -134,7 +134,13 @@ function BuildModal(props) {
             wide
             // onSelection={async (option) => setOptions("firstOption", option)}
           />
-          {(!isMizedOpen || windowWidth) &&<div>
+          {!props.stage==="two" &&<div>
+            <button className="cta mt-4">
+              <p>Call To Action</p>
+              <span>&rarr;</span>
+            </button>
+          </div>}
+          {props.stage==="one" &&<div>
             <button className="cta mt-4">
               <p>Call To Action</p>
               <span>&rarr;</span>
